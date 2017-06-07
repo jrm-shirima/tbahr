@@ -11,6 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Home routes
+Route::get('/','HomeController@index');
+Route::get('home','HomeController@index');
+
+
+//Employee routes
+Route::resource('employees', 'EmployeeController',['only' => [
+    'index', 'show','create'
+]]);
+
+//Role routes
+Route::resource('roles', 'RoleController',['only' => [
+    'index', 'show','create'
+]]);
+
+//Role routes
+Route::resource('particulars', 'ParticularController',['only' => [
+    'index', 'show','create'
+]]);
+
+//Role routes
+Route::resource('regions', 'RegionController',['only' => [
+    'index', 'show','create'
+]]);
