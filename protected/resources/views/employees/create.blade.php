@@ -12,11 +12,12 @@
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Add New Employee</h1>
+                    <h2 class="page-header">Add New Employee</h2>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-             <form>
+             <form id="formEmployee" action="{{url('employees')}}" method="POST">
+                  {{ csrf_field() }}
              <div class="row">
                
                     <div class="col-lg-6">
@@ -34,7 +35,7 @@
                           </div>
                           <div class="form-group">
                             <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                           </div>
                          <fieldset class="form-group">
@@ -57,7 +58,7 @@
                           </div>
                           <div class="form-group">
                             <label for="education">Education</label>
-                            <input type="password" class="form-control" id="education" name="education" placeholder="Enter Education">
+                            <input type="text" class="form-control" id="education" name="education" placeholder="Enter Education">
                           </div>
                           <div class="form-group">
                             <label for="registration_status">Registration Status</label>
@@ -83,10 +84,80 @@
             
         </div>
         <div class="row">
+            <div class="col-md-8 col-sm-8 pull-left" id="output">
+            
+            </div>
+
+        </div>
+        <div class="row">
             <div class="col-lg-6">
                  <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
             </div>
         </div>
        </form>
 </div>
+@endsection
+@section('header')
+     @include('layout.footer')
+@endsection
+@section('scripts')
+ <script>
+     $(document).ready(function(){
+      
+      var formObject = $("#formEmployee");
+      formObject.on('submit',function(){
+          
+              var postData = formObject.serializeArray();
+              var formURL  = formObject.attr("action");
+            
+                submitData(postData, formURL);         
+          
+          return false;
+          });         
+       
+      
+     
+    function submitData(postData, formURL){
+        
+        
+        $.ajax(
+                {
+                    url : formURL,
+                    type: "POST",
+                    data : postData,
+                    success: function(data){
+                         console.log(data);
+                        setTimeout(function() {
+                            $("#output").html("");
+                        }, 2000);
+                    },
+                    error: function(jqXhr,status, response) {
+                        console.log(jqXhr);
+                        if( jqXhr.status === 401 ) {
+                           // location.replace('{{url('login')}}');
+                        }
+                        if( jqXhr.status === 400 ){
+                            
+                            var errors = jqXhr.responseJSON.errors;
+                            var errorsHtml = '<div class="alert alert-danger"><p class="text-uppercase text-bold">There are errors kindly check</p><ul>';
+                            $.each(errors, function (key, value) {
+                                errorsHtml += '<li>' + value[0] + '</li>'; //showing only the first error.
+                            });
+                            errorsHtml += '</ul></di>';
+                            $('#output').html(errorsHtml);
+                            
+                        }else{
+                            $('#output').html(jqXhr.message);
+                        }
+                    }
+                });
+    }
+     
+     
+     
+     });
+      
+      
+     
+ </script>
 @endsection

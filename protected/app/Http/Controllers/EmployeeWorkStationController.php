@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Region;
+use App\EmployeeWorkStation;
 use Illuminate\Http\Request;
 
-class RegionController extends Controller
+class EmployeeWorkStationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RegionController extends Controller
      */
     public function index()
     {
-         return view('regions.index');
+        //
     }
 
     /**
@@ -24,7 +24,7 @@ class RegionController extends Controller
      */
     public function create()
     {
-        return view('regions.create');
+        //
     }
 
     /**
@@ -35,17 +35,23 @@ class RegionController extends Controller
      */
     public function store(Request $request)
     {
-        try {
+       
+         try {
             $validator = Validator::make($request->all(), [
+                'employee_id' => 'required',
                 'region' => 'required',
                 'district' => 'required',                           
             ]);
             if (!$validator->fails()){
-                $region             =  new Region();
+                $employeeWorkStation             =  new Employee();
                 
-                $region->region      =  $request->region;
-                $region->district    =  $request->district;
-                $region->save();           
+                $employeeWorkStation->employee_id =  $request->employee_id;
+                $employeeWorkStation->region      =  $request->region;
+                $employeeWorkStation->district    =  $request->district;
+                $employeeWorkStation->save();
+            
+            
+            
             
             } else {
                
@@ -62,15 +68,16 @@ class RegionController extends Controller
                 'errors' => $ex->getMessage()
             ), 402); // 400 being the HTTP code for an invalid request.
         }
+   
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Region  $region
+     * @param  \App\EmployeeWorkStation  $employeeWorkStation
      * @return \Illuminate\Http\Response
      */
-    public function show(Region $region)
+    public function show(EmployeeWorkStation $employeeWorkStation)
     {
         //
     }
@@ -78,10 +85,10 @@ class RegionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Region  $region
+     * @param  \App\EmployeeWorkStation  $employeeWorkStation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Region $region)
+    public function edit(EmployeeWorkStation $employeeWorkStation)
     {
         //
     }
@@ -90,10 +97,10 @@ class RegionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Region  $region
+     * @param  \App\EmployeeWorkStation  $employeeWorkStation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Region $region)
+    public function update(Request $request, EmployeeWorkStation $employeeWorkStation)
     {
         //
     }
@@ -101,10 +108,10 @@ class RegionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Region  $region
+     * @param  \App\EmployeeWorkStation  $employeeWorkStation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Region $region)
+    public function destroy(EmployeeWorkStation $employeeWorkStation)
     {
         //
     }

@@ -13,13 +13,14 @@ class CreateEmployeeWorkstationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('employee_workstation', function (Blueprint $table) {
+        Schema::create('employee_workstations', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('employee_id');
+            $table->integer('employee_id')->unsigned();
             $table->string('region');
             $table->string('district');   
             $table->timestamps();
-            $table->foreign('employee_id')->references('id')->on('employee')
+            $table->foreign('employee_id')->references('id')->on('employees')
                 ->onUpdate('cascade')->onDelete('cascade');
         });
     }
@@ -31,6 +32,6 @@ class CreateEmployeeWorkstationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employee_workstation');
+        Schema::dropIfExists('employee_workstations');
     }
 }

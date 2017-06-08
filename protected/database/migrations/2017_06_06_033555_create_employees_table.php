@@ -13,16 +13,17 @@ class CreateEmployeesTable extends Migration
      */
     public function up()
     {
-        Schema::table('employee', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('email')->unique();
+            $table->string('gender');
+            $table->string('email',191)->index();
             $table->string('dob');
             $table->string('marital_status');
             $table->string('education');
-            $table->string('cirtification');
-            $table->string('education');
+            $table->string('certifications');
             $table->string('registration_status');           
             $table->timestamps();
         });
@@ -35,7 +36,7 @@ class CreateEmployeesTable extends Migration
      */
     public function down()
     {
-        Schema::table('employee', function (Blueprint $table) {
+        Schema::table('employees', function (Blueprint $table) {
             //
         });
     }

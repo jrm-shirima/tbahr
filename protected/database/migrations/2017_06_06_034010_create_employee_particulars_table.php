@@ -13,9 +13,10 @@ class CreateEmployeeParticularsTable extends Migration
      */
     public function up()
     {
-        Schema::create('employee_particular', function (Blueprint $table) {
+        Schema::create('employee_particulars', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('employee_id');
+            $table->integer('employee_id')->unsigned();
             $table->string('salary_scale');
             $table->string('employment_date');   
             $table->string('confirmation_date');
@@ -23,7 +24,7 @@ class CreateEmployeeParticularsTable extends Migration
             $table->string('retirement_date');
             $table->string('propotion_date');                    
             $table->timestamps();
-            $table->foreign('employee_id')->references('id')->on('employee')
+            $table->foreign('employee_id')->references('id')->on('employees')
                 ->onUpdate('cascade')->onDelete('cascade');
         });
     }
@@ -35,6 +36,6 @@ class CreateEmployeeParticularsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employee_particular');
+        Schema::dropIfExists('employee_particulars');
     }
 }

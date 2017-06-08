@@ -46,7 +46,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Roles<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-lock" aria-hidden="true"></i>  Roles<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('roles')}}">All Roles</a>
@@ -58,7 +58,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-map-marker fa-fw"></i>Regions<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-map-marker fa-fw"></i>  Regions<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('regions')}}">All Region</a>
@@ -70,7 +70,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Particulars<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>  Particulars<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('particulars')}}">All Particular</a>

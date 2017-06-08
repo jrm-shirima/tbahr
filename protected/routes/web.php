@@ -18,12 +18,17 @@ Route::get('home','HomeController@index');
 
 //Employee routes
 Route::resource('employees', 'EmployeeController',['only' => [
-    'index', 'show','create'
+    'index', 'show','create','store'
 ]]);
+Route::get('get-employees','EmployeeController@getJSonEmployeesData');
+
+//Employee Work Station routes
+Route::post('employees/workstation','EmployeeWorkStationController@store');
+
 
 //Role routes
 Route::resource('roles', 'RoleController',['only' => [
-    'index', 'show','create'
+    'index', 'show','create','store'
 ]]);
 
 //Role routes
@@ -33,5 +38,5 @@ Route::resource('particulars', 'ParticularController',['only' => [
 
 //Role routes
 Route::resource('regions', 'RegionController',['only' => [
-    'index', 'show','create'
+    'index', 'show','create','store'
 ]]);

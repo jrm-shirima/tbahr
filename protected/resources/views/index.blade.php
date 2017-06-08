@@ -261,7 +261,8 @@
     </div>
     <!-- /.row -->
 </div>
-<!-- /#page-wrapper -->
-
-    
+<!-- /#page-wrapper -->    
+@endsection
+@section('header')
+     @include('layout.footer')
 @endsection

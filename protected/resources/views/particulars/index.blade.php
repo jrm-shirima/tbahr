@@ -20,3 +20,6 @@
             </div>       
 </div>
 @endsection
+@section('header')
+     @include('layout.footer')
+@endsection
