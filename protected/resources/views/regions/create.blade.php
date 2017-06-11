@@ -30,10 +30,6 @@
                             <label for="region">Region</label>
                             <input type="text" class="form-control" id="region" name="region" placeholder="Enter region name">
                           </div>
-                          <div class="form-group">
-                            <label for="district">District</label>
-                            <input  type="text" class="form-control" id="district" name="district" placeholder="Enter district name">
-                          </div> 
                           <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
                   </form>                         
                 </div>

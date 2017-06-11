@@ -84,7 +84,7 @@ class EmployeeController extends Controller
             ), 402); // 400 being the HTTP code for an invalid request.
         }
     }
-      public function  getJSonEmployeesData(){
+    public function  getJSonEmployeesData(){
         //
         $employees = Employee::orderBy('first_name','ASC')->get();
         $iTotalRecords =count(Employee::all());
@@ -154,6 +154,5 @@ class EmployeeController extends Controller
     {
         //
     }
-    
     
 }

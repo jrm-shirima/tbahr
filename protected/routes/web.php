@@ -40,3 +40,5 @@ Route::resource('particulars', 'ParticularController',['only' => [
 Route::resource('regions', 'RegionController',['only' => [
     'index', 'show','create','store'
 ]]);
+Route::get('get-regions','RegionController@getJSonRegionsData');
+Route::get('regions/load-data-to-match','RegionController@loadDataToMatch');

@@ -30,12 +30,13 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <table width="100%" class="table table-striped table-bordered table-hover" id="rolesDataTable">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="regionsDataTable">
                                 <thead>
                                     <tr>
                                         <th>No.</th>
                                         <th>Region Name</th>
                                         <th>Number of Employees</th>                                        
+                                        <th>Action</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,7 +59,7 @@
                         <form id="formAddEmployeeToRegion" action="{{url('employees/workstation')}}" method="POST">
                                {{ csrf_field() }}
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="btn-add-region">Modal title</h5>
+                                    <h5 class="modal-title" id="btn-add-region">Add Employee to Region</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
@@ -68,7 +69,7 @@
 
                                           <div class="col-lg-8 col-lg-offset-2">
                                              <div class="form-group">
-                                                <label for="marital_status">Region</label>
+                                                <label for="marital_status">Select Region</label>
                                                 <select class="form-control" id="marital_status" name="marital_status">
                                                   <option value="Single" >Singida</option>
                                                   <option value="Married">Mara</option>
@@ -78,21 +79,15 @@
                                                 </select>
                                               </div>
                                               <div class="form-group">
-                                                <label for="district">District</label>
-                                                <select class="form-control" id="district" name="district">
-                                                  <option value="2" >2</option>
-                                                  <option value="2">2</option>
-                                                  <option value="2">2</option>
-                                                  <option value="2" >2</option>
-                                                  <option value="2" >2</option>
-                                                </select>
-                                              </div>
-                                              <div class="form-group">
-                                                    <label for="last_name">Select Employee</label>
-                                                    <input  type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name">
-                                                </div>                                 
-                                               </div> 
-
+                                                    <label for="last_name">Search or Type in Employee name</label>
+                                                    <input id="searchEmployeeToAdd"  type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name">
+                                               </div>                                   
+                                         </div> 
+                                  </div>
+                                  <div class="row" >
+                                      <div class="col-lg-8 col-lg-offset-2"id="queryResult">
+                                          
+                                      </div>
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -104,6 +99,9 @@
                 </div>
             </div> 
 </div>
+@endsection
+@section('footer')
+     @include('layout.footer')
 @endsection
 @section('scripts')
  <script>
@@ -122,9 +120,7 @@
        
       
      
-    function submitData(postData, formURL){
-        
-        
+    function submitData(postData, formURL){       
         $.ajax(
                 {
                     url : formURL,
@@ -148,7 +144,7 @@
                             $.each(errors, function (key, value) {
                                 errorsHtml += '<li>' + value[0] + '</li>'; //showing only the first error.
                             });
-                            errorsHtml += '</ul></di>';
+                            errorsHtml += '</ul></div>';
                             $('#output').html(errorsHtml);
                             
                         }else{
@@ -158,14 +154,41 @@
                 });
     }
      
-     
+     //Load all regions and number employees available in.
+        $('#regionsDataTable').DataTable({
+            responsive: true,
+            ajax : '{{url("get-regions")}}', //this url load JSON region details to reduce loading time
+        });
+  
      
      });
+     
+     
       
-      
+        //Load all regions and number employees available in.
+                
+         
+      $('#searchEmployeeToAdd').on('keyup', function(){
+             var employeeToAdd  = $('#searchEmployeeToAdd'); 
+             var postData       = employeeToAdd.val();             
+          getMatchingEmployee(postData);
+            
+         });
+    function getMatchingEmployee(postData, token){
+         var queryResult = $('#queryResult');        
+        
+         $.ajax( "{{url('regions/load-data-to-match')}}",
+                  function(data){
+                         
+                     var result    = '<div class="form-group"><label for="sel1">Select list:</label><select class="form-control" id="sel1">';
+                         result    += '<option value='+data['id']+'>'+ data['first_name']+''+ data['last_name'] + '</option>';
+                         result    += '</select></div>';
+                      
+                         console.log(data);                        
+                    });
+        
+        
+     }
      
  </script>
-@endsection
-@section('footer')
-     @include('layout.footer')
 @endsection

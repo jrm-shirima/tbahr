@@ -62,7 +62,7 @@
             responsive: true,
             ajax : '{{url("get-employees")}}', //this url load JSON Client details to reduce loading time
         });
-    });
+    }); 
     </script>
 
 @endsection
