@@ -36,8 +36,7 @@ class RegionController extends Controller
                 $region->region,
                 '<span id="'.$region->id.'">
                     <a href="#" title="View Employees available in {$region->region}" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                   </span>',
-                
+                   </span>',                
             );
         }
         $records["draw"] = $sEcho;
@@ -140,7 +139,7 @@ class RegionController extends Controller
      try{   
             $employees = Employee::orderBy('first_name','ASC')->get();
             $result      = array();
-            $contain   = false;
+          
           foreach($employees as $employee) {
 
               $result['data'][]  = [
@@ -152,7 +151,7 @@ class RegionController extends Controller
          }
          return Response::json(array(
                         'success' => true,
-                        'data' => $data
+                        'data' => $result
                     ), 200);                // 400 being the HTTP code for an invalid request.
 
         }catch (\Exception $ex){

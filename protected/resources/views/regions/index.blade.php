@@ -177,7 +177,7 @@
     function getMatchingEmployee(postData, token){
          var queryResult = $('#queryResult');        
         
-         $.ajax( "{{url('regions/load-data-to-match')}}",
+         $.get( "{{url('load-data-to-match')}}",
                   function(data){
                          
                      var result    = '<div class="form-group"><label for="sel1">Select list:</label><select class="form-control" id="sel1">';
