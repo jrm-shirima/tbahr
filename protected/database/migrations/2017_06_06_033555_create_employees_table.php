@@ -23,7 +23,7 @@ class CreateEmployeesTable extends Migration
             $table->string('dob');
             $table->string('marital_status');
             $table->string('education');
-            $table->string('certifications');
+            $table->string('region');
             $table->string('registration_status');           
             $table->timestamps();
         });

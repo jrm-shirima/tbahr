@@ -42,7 +42,7 @@
                                 <legend>Gender</legend>
                                 <label class="radio-inline"><input type="radio" name="gender" value="male">Male</label>
                                 <label class="radio-inline"><input type="radio" name="gender" value="female" >Female</label>
-                                <label class="radio-inline"><input type="radio" name="gender" value="other">Other</label> 
+
                         </fieldset>
                    </div>
                  <div class="col-lg-6">
@@ -71,13 +71,11 @@
                             </select>
                           </div>                          
                           <div class="form-group">
-                            <label for="certifications">Certifications</label>
-                            <select class="form-control" name="certifications" id="certifications">
-                              <option value="CCNA">CCNA</option>
-                              <option value="2" >2</option>
-                              <option value="3" >3</option>
-                              <option value="4" >4</option>
-                              <option value="5" >5</option>
+                            <label for="certifications">Region</label>
+                            <select class="form-control" name="region" id="region">
+                              @foreach($regions as $region)
+                                <option value="{{$region->region}}">{{$region->region}}</option>
+                             @endforeach
                             </select>
                        </div>                          
                 </div>

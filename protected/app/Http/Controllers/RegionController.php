@@ -23,6 +23,7 @@ class RegionController extends Controller
     public function  getJSonRegionsData(){
         //
         $regions = Region::orderBy('region','ASC')->get();
+
         $iTotalRecords =count(Region::all());
         $sEcho = intval(10);
         $records = array();
@@ -31,9 +32,9 @@ class RegionController extends Controller
         foreach($regions as $region) {
             
             $records["data"][] = array(
-                $count,
+                $count++,
                 $region->region,
-                $region->region,
+                $this->getNumberAssignedToRegion($region->region),
                 '<span id="'.$region->id.'">
                     <a href="#" title="View Employees available in {$region->region}" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',                
@@ -43,6 +44,16 @@ class RegionController extends Controller
         $records["recordsTotal"] = $iTotalRecords;
         $records["recordsFiltered"] = $iTotalRecords;
         echo json_encode($records);
+    }
+    public function getNumberAssignedToRegion($region){
+        $employees   = Employee::all();
+        $count = 0;
+        foreach ($employees as $employee ){
+            if(trim($employee->region) == trim($region)){
+               $count++;
+            }
+        }
+        return $count;
     }
 
     /**

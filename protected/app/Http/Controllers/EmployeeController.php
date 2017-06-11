@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Region;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -27,7 +28,8 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-         return view('employees.create');
+        $regions   = Region::all();
+         return view('employees.create', compact('regions'));
     }
 
     /*
@@ -62,7 +64,7 @@ class EmployeeController extends Controller
                 $employee->dob            =  $request->dob;
                 $employee->education      =  $request->education;
                 $employee->registration_status =  $request->registration_status;
-                $employee->certifications     =  $request->certifications;
+                $employee->region     =  $request->region;
                 $employee->save();
             
             
