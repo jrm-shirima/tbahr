@@ -10,6 +10,19 @@ use Illuminate\Support\Facades\Response;
 
 class RegionController extends Controller
 {
+   
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
+    
     /**
      * Display a listing of the resource.
      *
@@ -31,9 +44,9 @@ class RegionController extends Controller
         foreach($regions as $region) {
             
             $records["data"][] = array(
-                $count,
+                $count++,
                 $region->region,
-                $region->region,
+                $this->getNumberOfAssignedEmployee($region->region),
                 '<span id="'.$region->id.'">
                     <a href="#" title="View Employees available in {$region->region}" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',                
@@ -72,6 +85,10 @@ class RegionController extends Controller
                 $region->region      =  $request->region;
                 $region->save();           
             
+                return Response::json(array(
+                    'success' => true,
+                    'errors' => []
+                ), 200);
             } else {
                
                 return Response::json(array(
@@ -134,32 +151,16 @@ class RegionController extends Controller
         //
     }
     
-    public function loadDataToMatch(){
-        
-     try{   
-            $employees = Employee::orderBy('first_name','ASC')->get();
-            $result      = array();
-          
-          foreach($employees as $employee) {
-
-              $result['data'][]  = [
-                  'id'=> $employee->id,
-                  'first_name' =>$employee->first_name,
-                  'last_name' => $employee->last_name 
-              ];
-              
-         }
-         return Response::json(array(
-                        'success' => true,
-                        'data' => $result
-                    ), 200);                // 400 being the HTTP code for an invalid request.
-
-        }catch (\Exception $ex){
-            
-            return Response::json(array(
-                'success' => false,
-                'errors' => $ex->getMessage()
-            ), 402); // 400 being the HTTP code for an invalid request.
+    public function getNumberOfAssignedEmployee($region){
+     
+        $employees = Employee::all();
+        $count     = 0;
+        foreach($employees as $employee){
+            if($employee->region == $region){
+                $count++;
+            }                    
         }
+      return $count;  
+     
    }
 }

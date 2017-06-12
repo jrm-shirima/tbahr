@@ -18,12 +18,6 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success btn-right" data-toggle="modal" data-target="#btn-add-region">Add Employee to Region</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             List of Regions
@@ -51,53 +45,7 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <div class="row">
-                <!-- Modal -->
-                <div class="modal fade" id="btn-add-region" tabindex="-1" role="dialog" aria-labelledby="btn-add-region" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <form id="formAddEmployeeToRegion" action="{{url('employees/workstation')}}" method="POST">
-                               {{ csrf_field() }}
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="btn-add-region">Add Employee to Region</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body">
-                                     <div class="row">
-
-                                          <div class="col-lg-8 col-lg-offset-2">
-                                             <div class="form-group">
-                                                <label for="marital_status">Select Region</label>
-                                                <select class="form-control" id="marital_status" name="marital_status">
-                                                  <option value="Single" >Singida</option>
-                                                  <option value="Married">Mara</option>
-                                                  <option value="Divorced">Kigoma</option>
-                                                  <option value="Widowed" >Arusha</option>
-                                                  <option value="Common-law marriage" >Dar-es-Salaam</option>
-                                                </select>
-                                              </div>
-                                              <div class="form-group">
-                                                    <label for="last_name">Search or Type in Employee name</label>
-                                                    <input id="searchEmployeeToAdd"  type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name">
-                                               </div>                                   
-                                         </div> 
-                                  </div>
-                                  <div class="row" >
-                                      <div class="col-lg-8 col-lg-offset-2"id="queryResult">
-                                          
-                                      </div>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <input type="submit" class="btn btn-success" value="Submit"/>
-                                  </div>
-                                </div>
-                        </form>
-                  </div>
-                </div>
-            </div> 
+       
 </div>
 @endsection
 @section('footer')
@@ -161,34 +109,8 @@
         });
   
      
-     });
+     });    
      
-     
-      
-        //Load all regions and number employees available in.
-                
-         
-      $('#searchEmployeeToAdd').on('keyup', function(){
-             var employeeToAdd  = $('#searchEmployeeToAdd'); 
-             var postData       = employeeToAdd.val();             
-          getMatchingEmployee(postData);
-            
-         });
-    function getMatchingEmployee(postData, token){
-         var queryResult = $('#queryResult');        
-        
-         $.get( "{{url('load-data-to-match')}}",
-                  function(data){
-                         
-                     var result    = '<div class="form-group"><label for="sel1">Select list:</label><select class="form-control" id="sel1">';
-                         result    += '<option value='+data['id']+'>'+ data['first_name']+''+ data['last_name'] + '</option>';
-                         result    += '</select></div>';
-                      
-                         console.log(data);                        
-                    });
-        
-        
-     }
      
  </script>
 @endsection

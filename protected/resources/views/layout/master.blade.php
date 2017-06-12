@@ -17,9 +17,11 @@
     <link href="{{asset("protected/assets/vendor/morrisjs/morris.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("protected/assets/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("protected/assets/css/tbahr.min.css")}}" rel="stylesheet" type="text/css">
-    
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
     <!-- /global stylesheets -->
-    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+   
 
 </head>
 
@@ -45,6 +47,8 @@
     <script type="text/javascript"  src="{{asset("protected/assets/vendor/datatables/js/datatables.min.js")}}"></script>
     <script type="text/javascript"  src="{{asset("protected/assets/vendor/sd-admin/dist/js/sb-admin-2.js")}}"></script>
     <script type="text/javascript"  src="{{asset("protected/assets/js/tbahr.min.js")}}"></script>
+   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <!-- /core JS files -->
      @yield('scripts')
 </body>

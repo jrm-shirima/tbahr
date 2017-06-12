@@ -16,24 +16,28 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-           <div class="row">
-            <div class="col-md-8 col-sm-8 pull-left" id="output">
-            
-            </div>
-
-            </div>
-            <div class="row">
-                <form id="formAddRegion" action="{{url('regions')}}" method="POST">
+             <form id="formAddRegion" action="{{url('regions')}}" method="POST">
+              <div class="row">
+                
                   {{ csrf_field() }}
                  <div class="col-lg-6">
-                         <div class="form-group">
+                        <div class="form-group">
                             <label for="region">Region</label>
                             <input type="text" class="form-control" id="region" name="region" placeholder="Enter region name">
-                          </div>
-                          <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
-                  </form>                         
+                        </div>
+                </div>               
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-sm-8 pull-left" id="output">
+                     <span class="load-spinner"></span>
                 </div>
-            </div>       
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                     <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
+                </div>
+           </div>
+        </form>  
 </div>
 @endsection
 @section('scripts')
@@ -62,10 +66,14 @@
                     type: "POST",
                     data : postData,
                     success: function(data){
+                         if(data.success == true){
+                        $('.load-spinner').css('display','none');
                          console.log(data);
-                        setTimeout(function() {
-                            $("#output").html("");
-                        }, 2000);
+                         var rsMsg = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+                            rsMsg  +='<strong>Success!</strong> You\'ve successifully, added new employee, You can <a href="{{url("regions")}}" class="alert-link">view here</a>.</div>';
+                         $("#output").html(rsMsg);
+                         $("#formAddRegion").closest('form').find("input[type=text], textarea").val("");
+                        }
                     },
                     error: function(jqXhr,status, response) {
                         console.log(jqXhr);

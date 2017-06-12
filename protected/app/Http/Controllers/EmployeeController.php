@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Region;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -10,6 +11,20 @@ use Illuminate\Support\Facades\Response;
 
 class EmployeeController extends Controller
 {
+   
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
+    
+    
     /**
      * Display a listing of the resource.
      *
@@ -25,9 +40,9 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-         return view('employees.create');
+    public function create(){
+        $regions = Region::all();
+         return view('employees.create', compact('regions'));
     }
 
     /*
@@ -48,6 +63,7 @@ class EmployeeController extends Controller
                 'email' => 'required',
                 'marital_status' => 'required',
                 'dob' => 'required',
+                'employment_date' => 'required',
                 'education' => 'required|before:tomorrow',
                 'registration_status' => 'required'                
             ]);
@@ -58,14 +74,18 @@ class EmployeeController extends Controller
                 $employee->last_name  =  $request->last_name;
                 $employee->gender     =  $request->gender;
                 $employee->email      =  $request->email;
-                $employee->marital_status =  $request->first_name;
-                $employee->dob            =  $request->dob;
-                $employee->education      =  $request->education;
+                $employee->marital_status  =  $request->first_name;
+                $employee->dob             =  $request->dob;
+                $employee->employment_date =  $request->employment_date;
+                $employee->education       =  $request->education;
                 $employee->registration_status =  $request->registration_status;
-                $employee->certifications     =  $request->certifications;
+                $employee->region     =  $request->region;
                 $employee->save();
             
-            
+             return Response::json(array(
+                    'success' => true,
+                    'data' => []
+                ), 200); 
             
             
             } else {

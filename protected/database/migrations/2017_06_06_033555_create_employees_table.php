@@ -20,10 +20,11 @@ class CreateEmployeesTable extends Migration
             $table->string('last_name');
             $table->string('gender');
             $table->string('email',191)->index();
-            $table->string('dob');
+            $table->date('dob');
             $table->string('marital_status');
             $table->string('education');
-            $table->string('certifications');
+            $table->date('employment_date');
+            $table->string('region');
             $table->string('registration_status');           
             $table->timestamps();
         });

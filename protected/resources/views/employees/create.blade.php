@@ -9,6 +9,7 @@
      @include('layout.main-right-navigation')
 @endsection
 @section('main-home')
+
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -29,9 +30,9 @@
                             <label for="last_name">Last name</label>
                             <input  type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name">
                           </div>
-                          <div class="form-group">
-                            <label for="dob">Date of birth</label>
-                            <input  type="text" class="form-control" id="dob" name="dob" placeholder="Enter date of birth">
+                           <div class="form-group"> <!-- Date input -->
+                            <label class="control-label" for="date">Date of birth</label>
+                            <input class="form-control" id="date" name="dob" placeholder="YYYY-MM-DD" type="text"/>
                           </div>
                           <div class="form-group">
                             <label for="email">Email address</label>
@@ -42,7 +43,6 @@
                                 <legend>Gender</legend>
                                 <label class="radio-inline"><input type="radio" name="gender" value="male">Male</label>
                                 <label class="radio-inline"><input type="radio" name="gender" value="female" >Female</label>
-                                <label class="radio-inline"><input type="radio" name="gender" value="other">Other</label> 
                         </fieldset>
                    </div>
                  <div class="col-lg-6">
@@ -69,15 +69,17 @@
                               <option value="4" >4</option>
                               <option value="5" >5</option>
                             </select>
-                          </div>                          
+                          </div>
+                          <div class="form-group"> <!-- Date input -->
+                            <label class="control-label" for="date">Employment Date</label>
+                            <input class="form-control" id="employment_date" name="employment_date" placeholder="YYYY-MM-DD" type="text"/>
+                          </div>
                           <div class="form-group">
-                            <label for="certifications">Certifications</label>
-                            <select class="form-control" name="certifications" id="certifications">
-                              <option value="CCNA">CCNA</option>
-                              <option value="2" >2</option>
-                              <option value="3" >3</option>
-                              <option value="4" >4</option>
-                              <option value="5" >5</option>
+                            <label for="certifications">Region</label>
+                            <select class="form-control" name="region" id="certifications">
+                              @foreach($regions as $region)
+                               <option value="{{$region->region}}" >{{$region->region}}</option>
+                              @endforeach
                             </select>
                        </div>                          
                 </div>
@@ -85,13 +87,14 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-sm-8 pull-left" id="output">
-            
+                 <span class="load-spinner"></span>
             </div>
 
         </div>
         <div class="row">
             <div class="col-lg-6">
                  <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
+                 
             </div>
         </div>
        </form>
@@ -103,10 +106,21 @@
 @section('scripts')
  <script>
      $(document).ready(function(){
+         
+       var dob_input=$('input[name="dob"]'); //our date input has the name "date"
+       var employmentDate_input=$('input[name="employment_date"]'); //our date input has the name "date"
+     
+       var options={
+        format: 'yyyy-mm-dd',
+        todayHighlight: true,
+        autoclose: true,
+      };
+      dob_input.datepicker(options);      
+      employmentDate_input.datepicker(options);
       
       var formObject = $("#formEmployee");
       formObject.on('submit',function(){
-          
+             $('.load-spinner').css('display','block');
               var postData = formObject.serializeArray();
               var formURL  = formObject.attr("action");
             
@@ -126,10 +140,16 @@
                     type: "POST",
                     data : postData,
                     success: function(data){
+                       if(data.success == true){
+                        $('.load-spinner').css('display','none');
                          console.log(data);
-                        setTimeout(function() {
-                            $("#output").html("");
-                        }, 2000);
+                         var rsMsg = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+                            rsMsg  +='<strong>Success!</strong> You\'ve successifully, added new employee, You can <a href="{{url("employees")}}" class="alert-link">view here</a>.</div>';
+                         $("#output").html(rsMsg);
+                         $("#formEmployee").closest('form').find("input[type=text], textarea").val("");
+                        }
+                         
+                        
                     },
                     error: function(jqXhr,status, response) {
                         console.log(jqXhr);

@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Authentication routes
+Auth::routes();
 
 //Home routes
 Route::get('/','HomeController@index');
-Route::get('home','HomeController@index');
+Route::get('/home','HomeController@index');
 
 
 //Employee routes
@@ -41,4 +43,7 @@ Route::resource('regions', 'RegionController',['only' => [
     'index', 'show','create','store'
 ]]);
 Route::get('get-regions','RegionController@getJSonRegionsData');
-Route::get('load-data-to-match','RegionController@loadDataToMatch');
+
+
+
+

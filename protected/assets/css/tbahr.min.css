@@ -2,3 +2,20 @@
     float: right !important;
     margin-bottom:15px;
 }
+.load-spinner{
+            display: none;
+            width:40px;
+            height:40px;
+            border: 2px solid #2f73ba;
+            border-top-color:#68bc45;
+            border-radius: 100%;
+            position:absolute;
+            left:200px;
+            margin:auto;
+            z-index: 9999;
+            animation: round 2s linear infinite;
+}
+@keyframes round{
+            from{transform: rotate(0deg)}
+            to{transform: rotate(360deg)}
+}
