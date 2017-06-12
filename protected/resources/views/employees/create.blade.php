@@ -76,10 +76,11 @@
                           </div>
                           <div class="form-group">
                             <label for="certifications">Region</label>
-                            <select class="form-control" name="region" id="certifications">
+                            <select class="form-control" name="region" id="region">
                               @foreach($regions as $region)
-                               <option value="{{$region->region}}" >{{$region->region}}</option>
-                              @endforeach
+                                <option value="{{$region->region}}">{{$region->region}}</option>
+                             @endforeach
+
                             </select>
                        </div>                          
                 </div>

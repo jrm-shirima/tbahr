@@ -36,6 +36,7 @@ class RegionController extends Controller
     public function  getJSonRegionsData(){
         //
         $regions = Region::orderBy('region','ASC')->get();
+
         $iTotalRecords =count(Region::all());
         $sEcho = intval(10);
         $records = array();
@@ -57,7 +58,6 @@ class RegionController extends Controller
         $records["recordsFiltered"] = $iTotalRecords;
         echo json_encode($records);
     }
-
     /**
      * Show the form for creating a new resource.
      *

@@ -23,7 +23,10 @@ class CreateEmployeesTable extends Migration
             $table->date('dob');
             $table->string('marital_status');
             $table->string('education');
+<<<<<<< HEAD
             $table->date('employment_date');
+=======
+>>>>>>> 03dc6bf00edb65c31edb2b8892e22e9229b62cdb
             $table->string('region');
             $table->string('registration_status');           
             $table->timestamps();

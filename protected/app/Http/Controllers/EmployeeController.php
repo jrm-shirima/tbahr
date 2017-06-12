@@ -40,9 +40,10 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(){
-        $regions = Region::all();
-         return view('employees.create', compact('regions'));
+    public function create()
+    {
+        $regions   = Region::all();
+       return view('employees.create', compact('regions'));
     }
 
     /*
