@@ -37,7 +37,7 @@
                           <div class="form-group">
                             <label for="email">Email address</label>
                             <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small id="emailHelp" class="form-text text-muted"> Valid Email example@mail.com.</small>
                           </div>
                          <fieldset class="form-group">
                                 <legend>Gender</legend>
@@ -52,8 +52,8 @@
                               <option value="Single" >Single</option>
                               <option value="Married">Married</option>
                               <option value="Divorced">Divorced</option>
-                              <option value="Widowed" >Widowed</option>
-                              <option value="Common-law marriage" >Common-law marriage</option>
+
+
                             </select>
                           </div>
                           <div class="form-group">
@@ -63,11 +63,11 @@
                           <div class="form-group">
                             <label for="registration_status">Registration Status</label>
                             <select class="form-control" id="registration_status" name="registration_status">
-                              <option value="Tanzania Board of Engineers" >Tanzania Board of Engineers</option>
-                              <option value="2" >2</option>
-                              <option value="3" >3</option>
-                              <option value="4" >4</option>
-                              <option value="5" >5</option>
+                              <option value="Engineers Registration Board" >Engineers Registration Board</option>
+                              <option value="Architects and Quantity Surveyors Registration Board" >Architects and Quantity Surveyors Registration Board</option>
+                              <option value="National Board of Accountants and Auditors" >National Board of Accountants and Auditors</option>
+                              <option value="Others" >Others</option>
+
                             </select>
                           </div>
                           <div class="form-group"> <!-- Date input -->
