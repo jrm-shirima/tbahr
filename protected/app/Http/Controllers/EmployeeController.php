@@ -75,7 +75,7 @@ class EmployeeController extends Controller
                 $employee->last_name  =  $request->last_name;
                 $employee->gender     =  $request->gender;
                 $employee->email      =  $request->email;
-                $employee->marital_status  =  $request->first_name;
+                $employee->marital_status  =  $request->marital_status;
                 $employee->dob             =  $request->dob;
                 $employee->employment_date =  $request->employment_date;
                 $employee->education       =  $request->education;
