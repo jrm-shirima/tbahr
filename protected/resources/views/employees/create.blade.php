@@ -1,4 +1,4 @@
- @extends('layout.master')
+@extends('layout.master')
 @section('page-title')
     {{"Add Employee"}}
 @endsection

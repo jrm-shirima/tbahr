@@ -40,6 +40,9 @@
         </form>  
 </div>
 @endsection
+@section('footer')
+     @include('layout.footer')
+@endsection
 @section('scripts')
  <script>
      $(document).ready(function(){
@@ -104,7 +107,4 @@
       
      
  </script>
-@endsection
-@section('footer')
-     @include('layout.footer')
 @endsection

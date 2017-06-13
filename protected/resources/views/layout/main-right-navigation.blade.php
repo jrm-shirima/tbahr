@@ -71,6 +71,18 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Admins<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{url('admins')}}">All Admins</a>
+                                </li>
+                                <li>
+                                    <a href="{{url('admins/create')}}">Add Admin</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i>  Employees<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -117,7 +129,7 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
+                        </li>                         
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

@@ -311,6 +311,7 @@ class ComposerStaticInit3813973eae7b316a0b023485112b2f7e
         'CreateEmployeesTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_06_033555_create_employees_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateRegionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_10_233126_create_regions_table.php',
+        'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_13_023037_create_roles_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',

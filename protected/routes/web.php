@@ -10,8 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Authentication routes
 Auth::routes();
+//Authentication routes
+Route::get('admins', array(
+'uses' =>'Auth\RegisterController@index',
+ 'as' => 'admins'
+));
+Route::get('admins/create', array(
+'uses' =>'Auth\RegisterController@create',
+ 'as' => 'admins/create'
+));
+Route::post('admins', array(
+'uses' =>'Auth\RegisterController@store',
+ 'as' => 'register'
+));
+Route::get('get-admins', array(
+'uses' =>'Auth\RegisterController@getJsonAdmins',
+ 'as' => 'get-admins'
+));
 
 //Home routes
 Route::get('/','HomeController@index');
@@ -32,6 +48,7 @@ Route::post('employees/workstation','EmployeeWorkStationController@store');
 Route::resource('roles', 'RoleController',['only' => [
     'index', 'show','create','store'
 ]]);
+Route::get('get-roles','RoleController@getJSonRolesData');
 
 //Role routes
 Route::resource('particulars', 'ParticularController',['only' => [

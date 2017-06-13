@@ -45,6 +45,7 @@ return array(
     'CreateEmployeesTable' => $baseDir . '/database/migrations/2017_06_06_033555_create_employees_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateRegionsTable' => $baseDir . '/database/migrations/2017_06_10_233126_create_regions_table.php',
+    'CreateRolesTable' => $baseDir . '/database/migrations/2017_06_13_023037_create_roles_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
