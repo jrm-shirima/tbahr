@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
@@ -36,38 +40,107 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
+    }
+    
+    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(){
+       return view('auth.index');
+    }
+    
+    public function getJsonAdmins(){
+        $users  = User::orderBy('first_name','ASC')->get();;
+       
+        $iTotalRecords =count(User::all());
+        $sEcho = intval(10);
+        $records = array();
+        $records["data"] = array();
+        $count   = 1;
+        foreach($users as $user) {
+            
+            $records["data"][] = array(
+                $count++,
+                $user->first_name.' '.$user->last_name,
+                $user->email,
+                $user->role,
+                Date('d M Y',strtotime($user->last_login)),
+                '<span id="'.$user->id.'">
+                    <a href="#" title="View more Admins details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                   </span>'                
+            );
+        }
+        $records["draw"] = $sEcho;
+        $records["recordsTotal"] = $iTotalRecords;
+        $records["recordsFiltered"] = $iTotalRecords;
+        echo json_encode($records);
+    }
+   /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {  
+       $roles  = Role::All();
+       return view('auth.register', compact('roles'));
     }
 
-    /**
-     * Get a validator for an incoming registration request.
+   
+
+    /*
+     *Store a newly created resource in storage.
      *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+    public function store(Request $request){
+       
+        try {
+            $validator = Validator::make($request->all(), [
+                'first_name' => 'required|string|max:255',
+                'last_name'  => 'required|string|max:255',
+                'email'      => 'required|string|email|max:255|unique:users',
+                'role'       => 'required',
+                'password'   => 'required|string|min:6|confirmed',               
+            ]);
+            if (!$validator->fails()){
+                $user             =  new User();
+                $dt               = Carbon::now();
+                $user->first_name =  $request->first_name;
+                $user->last_name  =  $request->last_name;
+                $user->email      =  $request->email;
+                $user->password   =  bcrypt($request->password);
+                $user->role       =  $request->role;
+                $user->last_login =  $dt->toDateString();
+                $user->save();
+            
+             return Response::json(array(
+                    'success' => true,
+                    'data' => User::All()
+                ), 200); 
+            
+            
+            } else {
+               
+                return Response::json(array(
+                    'success' => false,
+                    'errors' => $validator->getMessageBag()->toArray()
+                ), 400);                // 400 being the HTTP code for an invalid request.
+                   
+            }
+        }catch (\Exception $ex){
+            
+            return Response::json(array(
+                'success' => false,
+                'errors' => $ex->getMessage()
+            ), 402); // 400 being the HTTP code for an invalid request.
+        }
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'last_name' => $data['last_name'],
-            'first_name' => $data['first_name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-    }
+   
 }

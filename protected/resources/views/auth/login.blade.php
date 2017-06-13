@@ -1,6 +1,25 @@
-@extends('layout.auth')
-
-@section('content')
+@extends('layout.master')
+@section('page-title')
+    {{"Add Employee"}}
+@endsection
+@section('main-home')
+<nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+            </div>                
+        </div>
+</nav>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -50,7 +69,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     Login
                                 </button>
 
