@@ -107,6 +107,23 @@
                     </div>
                 </div>
             </div>
+             <div class="row">
+                 <div class="col-lg-12">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div style="width:100%;">
+                                {!! $chartjs->render() !!}
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                 </div>
+            </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">

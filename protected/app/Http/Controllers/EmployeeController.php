@@ -70,7 +70,6 @@ class EmployeeController extends Controller
             ]);
             if (!$validator->fails()){
                 $employee             =  new Employee();
-                
                 $employee->first_name =  $request->first_name;
                 $employee->last_name  =  $request->last_name;
                 $employee->gender     =  $request->gender;

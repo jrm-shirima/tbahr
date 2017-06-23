@@ -1,6 +1,9 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('layout.master')
+@section('page-title')
+    {{"Add Employee"}}
+@endsection
+@section('main-home')
+@include('auth.auth-header')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

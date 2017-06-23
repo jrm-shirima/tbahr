@@ -47,7 +47,7 @@
     <script type="text/javascript"  src="{{asset("protected/assets/vendor/datatables/js/datatables.min.js")}}"></script>
     <script type="text/javascript"  src="{{asset("protected/assets/vendor/sd-admin/dist/js/sb-admin-2.js")}}"></script>
     <script type="text/javascript"  src="{{asset("protected/assets/js/tbahr.min.js")}}"></script>
-   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <!-- /core JS files -->
      @yield('scripts')
