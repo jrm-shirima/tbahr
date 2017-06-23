@@ -25,11 +25,48 @@
                                     <a href="#">Civil Engineers</a>
                                 </li>
                                 <li>
-                                    <a href="#">Petrollium Engineers</a>
+                                    <a href="#">Electrical Engineers</a>
                                 </li>
                                  <li>
-                                    <a href="#">Water Engineers</a>
+                                    <a href="#">Environment Engineers</a>
                                 </li>
+                                <li>
+                                    <a href="#">Mechanica Engineers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Quantity Surveyors</a>
+                                </li>
+                                <li>
+                                    <a href="#">Archtects</a>
+                                </li>
+                                <li>
+                                    <a href="#">Technicians</a>
+                                </li>
+                                <li>
+                                    <a href="#">Accauntants</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ecomomist</a>
+                                </li>
+                                <li>
+                                    <a href="#">Human Resource</a>
+                                </li>
+                                <li>
+                                    <a href="#">Administrator</a>
+                                </li>
+                                <li>
+                                    <a href="#">Valuers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Land Surveyors</a>
+                                </li>
+                                <li>
+                                    <a href="#">Maintenance officer</a>
+                                </li>
+                                <li>
+                                    <a href="#">Estate officers</a>
+                                </li>
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

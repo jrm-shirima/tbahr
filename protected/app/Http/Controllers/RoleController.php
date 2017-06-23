@@ -49,7 +49,7 @@ class RoleController extends Controller
                 $this->getNumberOfAssignedAdmin($role->role),
                 '<span id="'.$role->id.'">
                     <a href="#" title="View Admins available in {$role->role}" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                   </span>',                
+                 </span>',                 
             );
         }
         $records["draw"] = $sEcho;
