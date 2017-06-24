@@ -11,91 +11,14 @@
 @section('main-home')
 
 <div id="page-wrapper">
-<<<<<<< HEAD
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header">Add New Employee</h2>
-=======
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="page-header">Add New Employee</h2>
-                </div>
-                <!-- /.col-lg-12 -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Add New Employee</h2>
             </div>
-             <form id="formEmployee" action="{{url('employees')}}" method="POST">
-                  {{ csrf_field() }}
-             <div class="row">
-               
-                    <div class="col-lg-6">
-                         <div class="form-group">
-                            <label for="first_name">First name</label>
-                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter first name">
-                          </div>
-                          <div class="form-group">
-                            <label for="last_name">Last name</label>
-                            <input  type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name">
-                          </div>
-                           <div class="form-group"> <!-- Date input -->
-                            <label class="control-label" for="date">Date of birth</label>
-                            <input class="form-control" id="date" name="dob" placeholder="YYYY-MM-DD" type="text"/>
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted"> Valid Email example@mail.com.</small>
-                          </div>
-                         <fieldset class="form-group">
-                                <legend>Gender</legend>
-                                <label class="radio-inline"><input type="radio" name="gender" value="male">Male</label>
-                                <label class="radio-inline"><input type="radio" name="gender" value="female" >Female</label>
-                        </fieldset>
-                   </div>
-                 <div class="col-lg-6">
-                         <div class="form-group">
-                            <label for="marital_status">Marital Status</label>
-                            <select class="form-control" id="marital_status" name="marital_status">
-                              <option value="Single" >Single</option>
-                              <option value="Married">Married</option>
-                              <option value="Divorced">Divorced</option>
-
-
-                            </select>
-                          </div>
-                          <div class="form-group">
-                            <label for="education">Education</label>
-                            <input type="text" class="form-control" id="education" name="education" placeholder="Enter Education">
-                          </div>
-                          <div class="form-group">
-                            <label for="registration_status">Registration Status</label>
-                            <select class="form-control" id="registration_status" name="registration_status">
-                              <option value="Engineers Registration Board" >Engineers Registration Board</option>
-                              <option value="Architects and Quantity Surveyors Registration Board" >Architects and Quantity Surveyors Registration Board</option>
-                              <option value="National Board of Accountants and Auditors" >National Board of Accountants and Auditors</option>
-                              <option value="Others" >Others</option>
-
-                            </select>
-                          </div>
-                          <div class="form-group"> <!-- Date input -->
-                            <label class="control-label" for="date">Employment Date</label>
-                            <input class="form-control" id="employment_date" name="employment_date" placeholder="YYYY-MM-DD" type="text"/>
-                          </div>
-                          <div class="form-group">
-                            <label for="certifications">Region</label>
-                            <select class="form-control" name="region" id="region">
-                              @foreach($regions as $region)
-                                <option value="{{$region->region}}">{{$region->region}}</option>
-                             @endforeach
-
-                            </select>
-                       </div>                          
-                </div>
-            
->>>>>>> dce43f0b001d6bd06a81a40437403e0434673d23
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-     <form id="formEmployee" action="{{url('employees')}}" method="POST">
-         {{ csrf_field() }}
+            <!-- /.col-lg-12 -->
+        </div>            
+         <form id="formEmployee" action="{{url('employees')}}" method="POST">
+             {{ csrf_field() }}
          <div class="row">
             <div class="col-lg-6">
                  <div class="form-group">
@@ -138,13 +61,11 @@
                   </div>
                   <div class="form-group">
                     <label for="registration_status">Registration Status</label>
-                    <select class="form-control" id="registration_status" name="registration_status">
-                      <option value="Tanzania Board of Engineers" >Tanzania Board of Engineers</option>
-                      <option value="2" >2</option>
-                      <option value="3" >3</option>
-                      <option value="4" >4</option>
-                      <option value="5" >5</option>
-                    </select>
+                    <select class="form-control" name="region" id="region">
+                          @foreach($professionRegs as $profReg)
+                            <option value="{{$profReg->profession_reg_name}}">{{$profReg->profession_reg_name}}</option>
+                         @endforeach
+                        </select>
                   </div>
                   <div class="form-group"> <!-- Date input -->
                     <label class="control-label" for="date">Employment Date</label>
@@ -155,6 +76,14 @@
                         <select class="form-control" name="region" id="region">
                           @foreach($regions as $region)
                             <option value="{{$region->region}}">{{$region->region}}</option>
+                         @endforeach
+                        </select>
+                  </div>
+                 <div class="form-group">
+                        <label for="certifications">Profession</label>
+                        <select class="form-control" name="region" id="region">
+                          @foreach($professions as $profession)
+                            <option value="{{$profession->profession_name}}">{{$profession->profession_name}}</option>
                          @endforeach
                         </select>
                   </div>
@@ -171,7 +100,7 @@
                  <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
             </div>
         </div>
-     </form>
+         </form>
 </div>
 @endsection
 @section('header')

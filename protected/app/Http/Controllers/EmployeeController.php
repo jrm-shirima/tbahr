@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Employee;
 use App\Region;
+use App\Profession;
+use App\ProfessionRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -41,9 +43,11 @@ class EmployeeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        $regions   = Region::all();
-       return view('employees.create', compact('regions'));
+    {   
+        $professions      = Profession::all();  
+        $professionRegs   = ProfessionRegistration::all();
+        $regions          = Region::all();
+       return view('employees.create', compact('regions','professions','professionRegs'));
     }
 
     /*

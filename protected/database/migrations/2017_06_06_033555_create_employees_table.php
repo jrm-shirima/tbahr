@@ -24,7 +24,8 @@ class CreateEmployeesTable extends Migration
             $table->string('marital_status');
             $table->string('education');
             $table->date('employment_date');
-            $table->string('region');
+            $table->string('region'); 
+            $table->string('profession');
             $table->string('registration_status');           
             $table->timestamps();
         });

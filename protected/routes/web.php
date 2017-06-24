@@ -50,10 +50,16 @@ Route::resource('roles', 'RoleController',['only' => [
 ]]);
 Route::get('get-roles','RoleController@getJSonRolesData');
 
-//Role routes
-Route::resource('particulars', 'ParticularController',['only' => [
-    'index', 'show','create'
+//Role Professions
+Route::resource('professions', 'ProfessionController',['only' => [
+    'index', 'show','create','store'
 ]]);
+Route::get('get-professions','ProfessionController@getJSonProfessionsData');
+//Role routes
+Route::resource('profession-registrations', 'ProfessionRegistrationController',['only' => [
+    'index', 'show','create','store'
+]]);
+Route::get('get-professionRegstrations','ProfessionRegistrationController@getJSonProfessionRegistrationsData');
 
 //Role routes
 Route::resource('regions', 'RegionController',['only' => [
