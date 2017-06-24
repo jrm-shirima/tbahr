@@ -71,7 +71,7 @@
                                 $('.load-spinner').css('display','none');
                                  console.log(data);
                                  var rsMsg = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
-                                    rsMsg  +='<strong>Success!</strong> You\'ve successifully, added new profession, You can <a href="{{url("professions")}}" class="alert-link">view here</a>.</div>';
+                                    rsMsg  +='<strong>Success!</strong> You\'ve successifully, added new profession, You can <a href="{{url("profession-registrations")}}" class="alert-link">view here</a>.</div>';
                                  $("#output").html(rsMsg);
                                  $("#professionRegistration").closest('form').find("input[type=text], textarea").val("");
                                 }

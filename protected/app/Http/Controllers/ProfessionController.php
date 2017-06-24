@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Profession;
+use App\EmployeeParticular;
 use App\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -91,7 +92,7 @@ class ProfessionController extends Controller
                 $profession->profession_name,
                 $this->getNumberOfAssignedEmployee($profession->profession_name),                
                 '<span id="'.$profession->id.'">
-                    <a href="#" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                    <a href="'.url("employees/profession").'/'.$profession->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
                 
             );
@@ -108,11 +109,17 @@ class ProfessionController extends Controller
      * @param  \App\Professional $professional
      * @return \Illuminate\Http\Response
      */
-    public function show(Profession $profession)
+    public function show()
     {
-        //
+        return view('professions.show');
     }
-
+    
+    
+     public function  getJSonEmployeesByProfession($name){
+        //
+        $employees = DB::table('employee_particulrs')->where('profession', '=', $name)->get();
+         var_dump($employee);
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -151,7 +158,9 @@ class ProfessionController extends Controller
         $employees = Employee::all();
         $count     = 0;
         foreach($employees as $employee){
-            if($employee->profession == $profession){
+             $particular = $employee->employeeParticulars;
+            
+            if($particular->profession == $profession){
                 $count++;
             }                    
         }

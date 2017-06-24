@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ProfessionRegistration;
 use App\Employee;
+use App\EmployeeParticular;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -147,8 +148,11 @@ class ProfessionRegistrationController extends Controller
      
         $employees = Employee::all();
         $count     = 0;
+       
         foreach($employees as $employee){
-            if($employee->profession == $profession){
+            $particular  = $employee->employeeParticulars;
+            
+            if($particular->registration_status == $profession){
                 $count++;
             }                    
         }

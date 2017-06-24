@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Employee;
 use App\Region;
+use DB;
+use App\EmployeeParticular;
 use App\Profession;
 use App\ProfessionRegistration;
 use Illuminate\Http\Request;
@@ -69,6 +71,8 @@ class EmployeeController extends Controller
                 'marital_status' => 'required',
                 'dob' => 'required',
                 'employment_date' => 'required',
+                'phone' => 'required',
+                'employment_type' => 'required',
                 'education' => 'required|before:tomorrow',
                 'registration_status' => 'required',                
                 'profession' => 'required'                
@@ -81,14 +85,25 @@ class EmployeeController extends Controller
                 $employee->email      =  $request->email;
                 $employee->marital_status  =  $request->marital_status;
                 $employee->dob             =  $request->dob;
-                $employee->employment_date =  $request->employment_date;
-                $employee->education       =  $request->education;
-                $employee->registration_status =  $request->registration_status;
-                $employee->profession =  $request->profession;
-                $employee->region     =  $request->region;
+                $employee->phone           =  $request->phone;
                 $employee->save();
             
-             return Response::json(array(
+            
+                $employeeParticular  =  new EmployeeParticular();
+                $employeeParticular->employee_id = $employee->id  ;
+                $employeeParticular->employment_type =  $request->employment_type;
+                $employeeParticular->employment_date =  $request->employment_date;
+                $employeeParticular->education       =  $request->education;
+                $employeeParticular->registration_status =  $request->registration_status;
+                $employeeParticular->profession =  $request->profession;
+                $employeeParticular->region     =  $request->region;
+                $employeeParticular->save();
+                
+                
+                
+                
+                
+                return Response::json(array(
                     'success' => true,
                     'data' => []
                 ), 200); 
@@ -120,14 +135,15 @@ class EmployeeController extends Controller
         $count=1;
         foreach($employees as $employee) {
             
+            $employeeParticular = $employee->employeeParticulars;
             $records["data"][] = array(
                 $employee->first_name.' '.$employee->last_name,
-                $employee->region,
-                $employee->profession,
-                $employee->education,
-                $employee->registration_status,
+                $employeeParticular->region,
+                $employeeParticular->profession,
+                $employeeParticular->education,
+                $employeeParticular->registration_status,
                 '<span id="'.$employee->id.'">
-                    <a href="#" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                    <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
                 
             );
@@ -147,10 +163,40 @@ class EmployeeController extends Controller
     public function show($id){
         
         //Show name, Registration status, retirement Date, Profession, Region
-        
+        $employee = Employee::find($id);
+        $employeeParticular = $employee->employeeParticulars;
        
+        return view('employees.show',compact('employee','employeeParticular'));
     }
-
+    
+    public function  getEmployeeByProfession($id){
+         
+        $profession = Profession::find($id);
+        $employeeParticulars = DB::table('employee_particulars')->where('profession', '=', $profession->profession_name)->get();
+        
+        $employees  = array();
+           
+         foreach($employeeParticulars as $key => $employeeParticular){
+           $employee   = Employee::find($employeeParticular->employee_id);
+           $record = array(
+               'full_name'=> $employee->first_name.' '.$employee->last_name,
+               'region'=> $employeeParticular->region,
+               'profession'=> $employeeParticular->profession,
+               'education'=>$employeeParticular->education,
+               'registration_status'=> $employeeParticular->registration_status,
+               'action'=> '<span id="'.$employee->id.'">
+                    <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                   </span>',
+                
+            );
+          array_push($employees, $record);
+        }
+         
+         
+         
+        return view('employees.view_employees_by_profession', compact('employees'));
+    }
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -160,7 +206,9 @@ class EmployeeController extends Controller
     public function edit(Employee $employee){
         //
     }
-
+    
+    
+    
     /**
      * Update the specified resource in storage.
      *

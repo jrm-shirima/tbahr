@@ -25,7 +25,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <table width="100%" class="table table-striped table-bordered table-hover" id="employeesDataTable">
+                            <table width="100%" class="table table-striped table-bordered table-hover" >
                                 <thead>
                                     <tr>
                                         <th>Full Name</th>
@@ -37,7 +37,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($employees as $particular)                               
+                                     <tr>
+                                        <td>{{$particular['full_name']}}</td>
+                                        <td>{{$particular['region']}}</td>
+                                        <td>{{$particular['profession']}}</td>
+                                        <td>{{$particular['education']}}</td>
+                                        <td>{{$particular['registration_status']}}</td>
+                                        <td><?php echo $particular['action'];?></td>
+                                     </tr>
                                     
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -68,10 +78,9 @@
      <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
     $(document).ready(function() {
-        $('#employeesDataTable').DataTable({
-            responsive: true,
-            ajax : '{{url("get-employees")}}', //this url load JSON Client details to reduce loading time
-        });
+        var url = window.location.pathname
+       
+       
     }); 
     </script>
 

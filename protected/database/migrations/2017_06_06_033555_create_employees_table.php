@@ -22,11 +22,7 @@ class CreateEmployeesTable extends Migration
             $table->string('email',191)->index();
             $table->date('dob');
             $table->string('marital_status');
-            $table->string('education');
-            $table->date('employment_date');
-            $table->string('region'); 
-            $table->string('profession');
-            $table->string('registration_status');           
+            $table->string('phone');
             $table->timestamps();
         });
     }
