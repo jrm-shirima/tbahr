@@ -29,8 +29,8 @@
                                 <thead>
                                     <tr>
                                         <th>Full Name</th>
-                                        <th>Gender</th>
-                                        <th>Marital Status</th>
+                                        <th>Region</th>
+                                        <th>Profession</th>
                                         <th>Education</th>
                                         <th>Registration Status</th>
                                         <th>Action</th>

@@ -61,7 +61,7 @@
                   </div>
                   <div class="form-group">
                     <label for="registration_status">Registration Status</label>
-                    <select class="form-control" name="region" id="region">
+                    <select class="form-control" name="registration_status" id="registration_status">
                           @foreach($professionRegs as $profReg)
                             <option value="{{$profReg->profession_reg_name}}">{{$profReg->profession_reg_name}}</option>
                          @endforeach
@@ -80,8 +80,8 @@
                         </select>
                   </div>
                  <div class="form-group">
-                        <label for="certifications">Profession</label>
-                        <select class="form-control" name="region" id="region">
+                        <label for="profession">Profession</label>
+                        <select class="form-control" name="profession" id="profession">
                           @foreach($professions as $profession)
                             <option value="{{$profession->profession_name}}">{{$profession->profession_name}}</option>
                          @endforeach

@@ -70,7 +70,8 @@ class EmployeeController extends Controller
                 'dob' => 'required',
                 'employment_date' => 'required',
                 'education' => 'required|before:tomorrow',
-                'registration_status' => 'required'                
+                'registration_status' => 'required',                
+                'profession' => 'required'                
             ]);
             if (!$validator->fails()){
                 $employee             =  new Employee();
@@ -83,6 +84,7 @@ class EmployeeController extends Controller
                 $employee->employment_date =  $request->employment_date;
                 $employee->education       =  $request->education;
                 $employee->registration_status =  $request->registration_status;
+                $employee->profession =  $request->profession;
                 $employee->region     =  $request->region;
                 $employee->save();
             
@@ -120,8 +122,8 @@ class EmployeeController extends Controller
             
             $records["data"][] = array(
                 $employee->first_name.' '.$employee->last_name,
-                $employee->gender,
-                $employee->marital_status,
+                $employee->region,
+                $employee->profession,
                 $employee->education,
                 $employee->registration_status,
                 '<span id="'.$employee->id.'">
@@ -142,8 +144,11 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    public function show(Employee $employee){
-        //
+    public function show($id){
+        
+        //Show name, Registration status, retirement Date, Profession, Region
+        
+       
     }
 
     /**
