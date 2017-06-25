@@ -39,7 +39,10 @@ Route::resource('employees', 'EmployeeController',['only' => [
     'index', 'show','create','store'
 ]]);
 Route::get('get-employees','EmployeeController@getJSonEmployeesData');
-Route::get('employees/profession/{id}','EmployeeController@getEmployeeByProfession');
+Route::get('employees/profession/{id}','EmployeeController@showEmployeesByProfession');
+Route::get('employees/registration-status/{id}','EmployeeController@showEmployeesByProfessionRegStatus');
+Route::get('get-employees/profession/{id}','EmployeeController@getJSONEmployeesByProfession');
+Route::get('get-employees/registration-status/{id}','EmployeeController@getJSONEmployeesByProfessionRegStatus');
 
 //Employee Work Station routes
 Route::post('employees/workstation','EmployeeWorkStationController@store');

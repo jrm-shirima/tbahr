@@ -23,7 +23,7 @@ class EmployeeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     
@@ -168,35 +168,78 @@ class EmployeeController extends Controller
        
         return view('employees.show',compact('employee','employeeParticular'));
     }
-    
-    public function  getEmployeeByProfession($id){
+    public function showEmployeesByProfession($id){
+         $profession = Profession::find($id);
          
+        return view('employees.profession', compact('profession')); 
+    }
+    
+    public function getJSONEmployeesByProfession($id){
         $profession = Profession::find($id);
         $employeeParticulars = DB::table('employee_particulars')->where('profession', '=', $profession->profession_name)->get();
         
-        $employees  = array();
+        $iTotalRecords =count($employeeParticulars);
+        $sEcho = intval(10);
+        $records = array();
+        $records["data"] = array();
+        $count=1;
+       foreach($employeeParticulars as $key => $employeeParticular){
+            $employee   = Employee::find($employeeParticular->employee_id);    
+            $employeeParticular = $employee->employeeParticulars;
            
-         foreach($employeeParticulars as $key => $employeeParticular){
-           $employee   = Employee::find($employeeParticular->employee_id);
-           $record = array(
-               'full_name'=> $employee->first_name.' '.$employee->last_name,
-               'region'=> $employeeParticular->region,
-               'profession'=> $employeeParticular->profession,
-               'education'=>$employeeParticular->education,
-               'registration_status'=> $employeeParticular->registration_status,
-               'action'=> '<span id="'.$employee->id.'">
+            $records["data"][] = array(
+                $employee->first_name.' '.$employee->last_name,
+                $employeeParticular->region,
+                $employeeParticular->profession,
+                $employeeParticular->education,
+                $employeeParticular->registration_status,
+                '<span id="'.$employee->id.'">
                     <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
                 
             );
-          array_push($employees, $record);
         }
+        $records["draw"] = $sEcho;
+        $records["recordsTotal"] = $iTotalRecords;
+        $records["recordsFiltered"] = $iTotalRecords;
+        echo json_encode($records);
+    }
+    public function showEmployeesByProfessionRegStatus($id){
+         $professionReg = ProfessionRegistration::find($id);
          
-         
-         
-        return view('employees.view_employees_by_profession', compact('employees'));
+        return view('employees.profession_registration_status', compact('professionReg')); 
     }
     
+    public function getJSONEmployeesByProfessionRegStatus($id){
+        $professionReg = ProfessionRegistration::find($id);
+        $employeeParticulars = DB::table('employee_particulars')->where('registration_status', '=', $professionReg->profession_reg_name)->get();
+        
+        $iTotalRecords =count($employeeParticulars);
+        $sEcho = intval(10);
+        $records = array();
+        $records["data"] = array();
+        $count=1;
+       foreach($employeeParticulars as $key => $employeeParticular){
+            $employee   = Employee::find($employeeParticular->employee_id);    
+            $employeeParticular = $employee->employeeParticulars;
+           
+            $records["data"][] = array(
+                $employee->first_name.' '.$employee->last_name,
+                $employeeParticular->region,
+                $employeeParticular->profession,
+                $employeeParticular->education,
+                $employeeParticular->registration_status,
+                '<span id="'.$employee->id.'">
+                    <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                   </span>',
+                
+            );
+        }
+        $records["draw"] = $sEcho;
+        $records["recordsTotal"] = $iTotalRecords;
+        $records["recordsFiltered"] = $iTotalRecords;
+        echo json_encode($records);
+    }
     /**
      * Show the form for editing the specified resource.
      *

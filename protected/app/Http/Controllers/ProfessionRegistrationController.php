@@ -11,10 +11,15 @@ use Illuminate\Support\Facades\Response;
 
 class ProfessionRegistrationController extends Controller
 {
+    public function __construct(){
+         $this->middleware('auth');
+     }
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     
      */
     public function index()
     {
@@ -88,7 +93,7 @@ class ProfessionRegistrationController extends Controller
                 $profession->profession_reg_name,
                 $this->getNumberOfAssignedEmployee($profession->profession_reg_name),                
                 '<span id="'.$profession->id.'">
-                    <a href="#" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                    <a href="'.url("employees/registration-status").'/'.$profession->id.'"  title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
                 
             );
