@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Response;
 
 class EmployeeController extends Controller
 {
-   
+
      /**
      * Create a new controller instance.
      *
@@ -26,9 +26,9 @@ class EmployeeController extends Controller
         $this->middleware('auth');
     }
 
-    
-    
-    
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -45,8 +45,8 @@ class EmployeeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   
-        $professions      = Profession::all();  
+    {
+        $professions      = Profession::all();
         $professionRegs   = ProfessionRegistration::all();
         $regions          = Region::all();
        return view('employees.create', compact('regions','professions','professionRegs'));
@@ -60,7 +60,7 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         try {
             $validator = Validator::make($request->all(), [
                 'first_name' => 'required',
@@ -74,8 +74,8 @@ class EmployeeController extends Controller
                 'phone' => 'required',
                 'employment_type' => 'required',
                 'education' => 'required|before:tomorrow',
-                'registration_status' => 'required',                
-                'profession' => 'required'                
+                'registration_status' => 'required',
+                'profession' => 'required'
             ]);
             if (!$validator->fails()){
                 $employee             =  new Employee();
@@ -87,8 +87,8 @@ class EmployeeController extends Controller
                 $employee->dob             =  $request->dob;
                 $employee->phone           =  $request->phone;
                 $employee->save();
-            
-            
+
+
                 $employeeParticular  =  new EmployeeParticular();
                 $employeeParticular->employee_id = $employee->id  ;
                 $employeeParticular->employment_type =  $request->employment_type;
@@ -98,27 +98,27 @@ class EmployeeController extends Controller
                 $employeeParticular->profession =  $request->profession;
                 $employeeParticular->region     =  $request->region;
                 $employeeParticular->save();
-                
-                
-                
-                
-                
+
+
+
+
+
                 return Response::json(array(
                     'success' => true,
                     'data' => []
-                ), 200); 
-            
-            
+                ), 200);
+
+
             } else {
-               
+
                 return Response::json(array(
                     'success' => false,
                     'errors' => $validator->getMessageBag()->toArray()
                 ), 400);                // 400 being the HTTP code for an invalid request.
-                   
+
             }
         }catch (\Exception $ex){
-            
+
             return Response::json(array(
                 'success' => false,
                 'errors' => $ex->getMessage()
@@ -134,7 +134,7 @@ class EmployeeController extends Controller
         $records["data"] = array();
         $count=1;
         foreach($employees as $employee) {
-            
+
             $employeeParticular = $employee->employeeParticulars;
             $records["data"][] = array(
                 $employee->first_name.' '.$employee->last_name,
@@ -145,7 +145,7 @@ class EmployeeController extends Controller
                 '<span id="'.$employee->id.'">
                     <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
-                
+
             );
         }
         $records["draw"] = $sEcho;
@@ -161,32 +161,66 @@ class EmployeeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id){
-        
+
         //Show name, Registration status, retirement Date, Profession, Region
         $employee = Employee::find($id);
         $employeeParticular = $employee->employeeParticulars;
-       
+
         return view('employees.show',compact('employee','employeeParticular'));
+    }
+    public function showEmployeesByRegion($id){
+      $region = Region::find($id);
+
+     return view('employees.region', compact('region'));
     }
     public function showEmployeesByProfession($id){
          $profession = Profession::find($id);
-         
-        return view('employees.profession', compact('profession')); 
+
+        return view('employees.profession', compact('profession'));
     }
-    
+    public function getJSONEmployeesByRegion($id){
+      $region = Region::find($id);
+      $employeeParticulars = DB::table('employee_particulars')->where('region', '=', $region->region)->get();
+
+      $iTotalRecords =count($employeeParticulars);
+      $sEcho = intval(10);
+      $records = array();
+      $records["data"] = array();
+      $count=1;
+     foreach($employeeParticulars as $key => $employeeParticular){
+          $employee   = Employee::find($employeeParticular->employee_id);
+          $employeeParticular = $employee->employeeParticulars;
+
+          $records["data"][] = array(
+              $employee->first_name.' '.$employee->last_name,
+              $employeeParticular->region,
+              $employeeParticular->profession,
+              $employeeParticular->education,
+              $employeeParticular->registration_status,
+              '<span id="'.$employee->id.'">
+                  <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                 </span>',
+
+          );
+      }
+      $records["draw"] = $sEcho;
+      $records["recordsTotal"] = $iTotalRecords;
+      $records["recordsFiltered"] = $iTotalRecords;
+      echo json_encode($records);
+    }
     public function getJSONEmployeesByProfession($id){
         $profession = Profession::find($id);
         $employeeParticulars = DB::table('employee_particulars')->where('profession', '=', $profession->profession_name)->get();
-        
+
         $iTotalRecords =count($employeeParticulars);
         $sEcho = intval(10);
         $records = array();
         $records["data"] = array();
         $count=1;
        foreach($employeeParticulars as $key => $employeeParticular){
-            $employee   = Employee::find($employeeParticular->employee_id);    
+            $employee   = Employee::find($employeeParticular->employee_id);
             $employeeParticular = $employee->employeeParticulars;
-           
+
             $records["data"][] = array(
                 $employee->first_name.' '.$employee->last_name,
                 $employeeParticular->region,
@@ -196,7 +230,7 @@ class EmployeeController extends Controller
                 '<span id="'.$employee->id.'">
                     <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
-                
+
             );
         }
         $records["draw"] = $sEcho;
@@ -206,23 +240,23 @@ class EmployeeController extends Controller
     }
     public function showEmployeesByProfessionRegStatus($id){
          $professionReg = ProfessionRegistration::find($id);
-         
-        return view('employees.profession_registration_status', compact('professionReg')); 
+
+        return view('employees.profession_registration_status', compact('professionReg'));
     }
-    
+
     public function getJSONEmployeesByProfessionRegStatus($id){
         $professionReg = ProfessionRegistration::find($id);
         $employeeParticulars = DB::table('employee_particulars')->where('registration_status', '=', $professionReg->profession_reg_name)->get();
-        
+
         $iTotalRecords =count($employeeParticulars);
         $sEcho = intval(10);
         $records = array();
         $records["data"] = array();
         $count=1;
        foreach($employeeParticulars as $key => $employeeParticular){
-            $employee   = Employee::find($employeeParticular->employee_id);    
+            $employee   = Employee::find($employeeParticular->employee_id);
             $employeeParticular = $employee->employeeParticulars;
-           
+
             $records["data"][] = array(
                 $employee->first_name.' '.$employee->last_name,
                 $employeeParticular->region,
@@ -232,7 +266,7 @@ class EmployeeController extends Controller
                 '<span id="'.$employee->id.'">
                     <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
                    </span>',
-                
+
             );
         }
         $records["draw"] = $sEcho;
@@ -249,9 +283,9 @@ class EmployeeController extends Controller
     public function edit(Employee $employee){
         //
     }
-    
-    
-    
+
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -274,5 +308,5 @@ class EmployeeController extends Controller
     {
         //
     }
-    
+
 }

@@ -23,7 +23,7 @@
                                 </li>
                                 <li>
                                     <a href="{{url('employees/create')}}">Add New</a>
-                                </li>                                                               
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -54,13 +54,13 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>                        
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-lock fa-fw" aria-hidden="true"></i>  Roles<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('roles/create')}}">Add New</a>
-                                </li>                                                               
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -69,11 +69,14 @@
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('regions/create')}}">Add Region</a>
-                                </li>                                
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li> 
+                        </li>
                         <li><h1>Report</h1></li>
+                        <li>
+                          <a href="{{url('employee-report')}}"><i class="fa fa-bar-chart-o fa-fw"></i>General Employees<span class="fa arrow"></span></a>
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Professionals<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -83,7 +86,7 @@
                                 <li>
                                     <a href="{{url('profession-registrations')}}">All Profession Registrations</a>
                                 </li>
-                                
+
 
                             </ul>
                             <!-- /.nav-second-level -->
@@ -93,16 +96,16 @@
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('admins')}}">All Admins</a>
-                                </li>                                
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>                        
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-lock fa-fw" aria-hidden="true"></i>  Roles<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('roles')}}">All Roles</a>
-                                </li>                                                                                              
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -111,10 +114,10 @@
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{url('regions')}}">All Region</a>
-                                </li>                                                               
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>                       
+                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

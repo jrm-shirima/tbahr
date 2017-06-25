@@ -41,11 +41,17 @@ Route::resource('employees', 'EmployeeController',['only' => [
 Route::get('get-employees','EmployeeController@getJSonEmployeesData');
 Route::get('employees/profession/{id}','EmployeeController@showEmployeesByProfession');
 Route::get('employees/registration-status/{id}','EmployeeController@showEmployeesByProfessionRegStatus');
+Route::get('employees/region/{id}','EmployeeController@showEmployeesByRegion');
 Route::get('get-employees/profession/{id}','EmployeeController@getJSONEmployeesByProfession');
 Route::get('get-employees/registration-status/{id}','EmployeeController@getJSONEmployeesByProfessionRegStatus');
+Route::get('get-employees/region/{id}','EmployeeController@getJSONEmployeesByRegion');
 
 //Employee Work Station routes
 Route::post('employees/workstation','EmployeeWorkStationController@store');
+
+//EmployeeReport routes
+Route::get('employee-report','EmployeeReportController@index');
+Route::get('get-employees-report/{reg_status}/{wStation}/{emp_type}','EmployeeReportController@getJSONEmployeesByFilter');
 
 
 //Role routes
@@ -70,7 +76,3 @@ Route::resource('regions', 'RegionController',['only' => [
     'index', 'show','create','store'
 ]]);
 Route::get('get-regions','RegionController@getJSonRegionsData');
-
-
-
-

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Response;
 
 class RegionController extends Controller
 {
-   
+
      /**
      * Create a new controller instance.
      *
@@ -21,8 +21,8 @@ class RegionController extends Controller
         //$this->middleware('auth');
     }
 
-    
-    
+
+
     /**
      * Display a listing of the resource.
      *
@@ -32,7 +32,7 @@ class RegionController extends Controller
     {
          return view('regions.index');
     }
-    
+
     public function  getJSonRegionsData(){
         //
         $regions = Region::orderBy('region','ASC')->get();
@@ -43,14 +43,14 @@ class RegionController extends Controller
         $records["data"] = array();
         $count=1;
         foreach($regions as $region) {
-            
+
             $records["data"][] = array(
                 $count++,
                 $region->region,
                 $this->getNumberOfAssignedEmployee($region->region),
                 '<span id="'.$region->id.'">
-                    <a href="#" title="View Employees available in {$region->region}" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                   </span>',                
+                  <a href="'.url("employees/region").'/'.$region->id.'" title="View Employees available in {$region->region}" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
+                   </span>',
             );
         }
         $records["draw"] = $sEcho;
@@ -78,27 +78,27 @@ class RegionController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'region' => 'required',                              
+                'region' => 'required',
             ]);
             if (!$validator->fails()){
                 $region             =  new Region();
                 $region->region      =  $request->region;
-                $region->save();           
-            
+                $region->save();
+
                 return Response::json(array(
                     'success' => true,
                     'errors' => []
                 ), 200);
             } else {
-               
+
                 return Response::json(array(
                     'success' => false,
                     'errors' => $validator->getMessageBag()->toArray()
                 ), 400);                // 400 being the HTTP code for an invalid request.
-                   
+
             }
         }catch (\Exception $ex){
-            
+
             return Response::json(array(
                 'success' => false,
                 'errors' => $ex->getMessage()
@@ -150,17 +150,20 @@ class RegionController extends Controller
     {
         //
     }
-    
+
     public function getNumberOfAssignedEmployee($region){
-     
-        $employees = Employee::all();
-        $count     = 0;
-        foreach($employees as $employee){
-            if($employee->region == $region){
-                $count++;
-            }                    
-        }
-      return $count;  
-     
+
+      $employees = Employee::all();
+      $count     = 0;
+
+      foreach($employees as $employee){
+          $particular  = $employee->employeeParticulars;
+
+          if($particular->region == $region){
+              $count++;
+          }
+      }
+    return $count;
+
    }
 }
