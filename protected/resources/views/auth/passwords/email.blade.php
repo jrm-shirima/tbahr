@@ -2,7 +2,7 @@
 @section('page-title')
     {{"Add Employee"}}
 @endsection
-@section('main-home')
+@section('page-content')
 @include('auth.auth-header')
 <div class="container">
     <div class="row">

@@ -1,14 +1,17 @@
 @extends('layout.master')
 @section('page-title')
-    {{"All Employees"}}
+    {{"Home"}}
 @endsection
 @section('header')
      @include('layout.header')
 @endsection
-@section('main-right-navigation')
-     @include('layout.main-right-navigation')
+@section('left-navigation')
+     @include('layout.left-navigation')
 @endsection
-@section('main-home')
+@section('top-navigation')
+     @include('layout.top-navigation')
+@endsection
+@section('page-content')
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">

@@ -1,14 +1,17 @@
- @extends('layout.master')
+@extends('layout.master')
 @section('page-title')
-    {{"Add Employee"}}
+    {{"Home"}}
 @endsection
 @section('header')
      @include('layout.header')
 @endsection
-@section('main-right-navigation')
-     @include('layout.main-right-navigation')
+@section('left-navigation')
+     @include('layout.left-navigation')
 @endsection
-@section('main-home')
+@section('top-navigation')
+     @include('layout.top-navigation')
+@endsection
+@section('page-content')
 
 <div id="page-wrapper">
             <div class="row">
@@ -100,7 +103,7 @@
        </form>
 </div>
 @endsection
-@section('header')
+@section('footer')
      @include('layout.footer')
 @endsection
 @section('scripts')

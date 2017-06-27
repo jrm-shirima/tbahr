@@ -1,14 +1,14 @@
 @extends('layout.master')
 @section('page-title')
-    {{"Regions"}}
+    {{"Home"}}
 @endsection
-@section('header')
-     @include('layout.header')
+@section('left-navigation')
+     @include('layout.left-navigation')
 @endsection
-@section('main-right-navigation')
-     @include('layout.main-right-navigation')
+@section('top-navigation')
+     @include('layout.top-navigation')
 @endsection
-@section('main-home')
+@section('page-content')
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
