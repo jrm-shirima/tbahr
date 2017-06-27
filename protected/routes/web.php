@@ -51,7 +51,8 @@ Route::post('employees/workstation','EmployeeWorkStationController@store');
 
 //EmployeeReport routes
 Route::get('employee-report','EmployeeReportController@index');
-Route::get('get-employees-report/{reg_status}/{wStation}/{emp_type}','EmployeeReportController@getJSONEmployeesByFilter');
+Route::get('get-employees-report','EmployeeReportController@getJSONEmployees');
+Route::get('get-employees-report/{reg_status}/{wStation}/{emp_type}/{requestBy}','EmployeeReportController@getJSONEmployeesByFilter');
 
 
 //Role routes

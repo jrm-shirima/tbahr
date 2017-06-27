@@ -51,8 +51,8 @@
                         <label for="employment_type">Type of Employment</label>
                         <select class="form-control" id="employment_type" name="employment_type">
                           <option value="Permanent" >Permanent</option>
-                          <option value="Contract/Temporary">Contract/Temporary</option>
-                          <option value="Internship/Volunteer">Internship/Volunteer</option>
+                          <option value="Temporary">Temporary</option>
+                          <option value="Internship">Internship</option>
                         </select>
                     </div>
                </div>

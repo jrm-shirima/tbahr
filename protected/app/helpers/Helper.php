@@ -12,11 +12,9 @@ class Helper{
     
     public static function calculateRetirementDate($dob){
         
-        
-        $currentAge             = Carbon::parse($dob)->age; 
-        $requiredAgeToRetire    = 65;
-        $yearDeff               = $requiredAgeToRetire - $currentAge;
-        $expectedRetiredDate    = Carbon::now()->addYears($yearDeff);
+        $currentAge             = Carbon::parse($dob);  
+        $requiredAgeToRetire    = 60;
+        $expectedRetiredDate    = Carbon::parse($dob)->addYears($requiredAgeToRetire);
            
     return Carbon::parse($expectedRetiredDate)->toFormattedDateString();
     }
