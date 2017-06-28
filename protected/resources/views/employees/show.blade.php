@@ -12,7 +12,6 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
-<div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Employee Details</h1>
@@ -34,93 +33,93 @@
                                         <td width="25%">
                                             <table  class="table table-striped table-bordered table-hover">
                                                 <tr>
-                                                    <th>Full Name</th>                                                    
+                                                    <th>Full Name</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Email Address</th>                                                    
+                                                    <th>Email Address</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Phone number</th>                                                    
+                                                    <th>Phone number</th>
                                                 </tr>
                                                  <tr>
-                                                    <th>Gender</th>                                                    
+                                                    <th>Gender</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Date of Birth</th>                                                    
+                                                    <th>Date of Birth</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Marital Status</th>                                                    
+                                                    <th>Marital Status</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Education</th>                                                    
+                                                    <th>Education</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Type of Employment</th>                                                    
+                                                    <th>Type of Employment</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Employment Date</th>                                                    
+                                                    <th>Employment Date</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Work Station</th>                                                    
+                                                    <th>Work Station</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Profession</th>                                                    
+                                                    <th>Profession</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Registration Status</th>                                                    
+                                                    <th>Registration Status</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Predictated Retirement Date</th>                                                    
+                                                    <th>Predictated Retirement Date</th>
                                                 </tr>
                                             </table>
                                         </td>
                                         <td>
                                             <table  class="table table-striped table-bordered table-hover" >
                                                 <tr>
-                                                    <td class="text-primary">{{$employee->first_name}} {{$employee->last_name}}</td>                                                    
+                                                    <td class="text-primary">{{$employee->first_name}} {{$employee->last_name}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employee->email}}</td>                                                    
+                                                    <td class="text-primary">{{$employee->email}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employee->phone}}</td>                                                    
+                                                    <td class="text-primary">{{$employee->phone}}</td>
                                                 </tr>
                                                  <tr>
-                                                    <td class="text-primary">{{$employee->gender}}</td>                                                    
+                                                    <td class="text-primary">{{$employee->gender}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{Helper::getFormattedDate($employee->dob)}}</td>                                                    
+                                                    <td class="text-primary">{{Helper::getFormattedDate($employee->dob)}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employee->marital_status}}</td>                                                    
+                                                    <td class="text-primary">{{$employee->marital_status}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->education}}</td>                                                    
+                                                    <td class="text-primary">{{$employeeParticular->education}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->employment_type}}</td>                                                    
+                                                    <td class="text-primary">{{$employeeParticular->employment_type}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{Helper::getFormattedDate($employeeParticular->employment_date)}}</td>                                                    
+                                                    <td class="text-primary">{{Helper::getFormattedDate($employeeParticular->employment_date)}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->region}}</td>                                                    
+                                                    <td class="text-primary">{{$employeeParticular->region}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->profession}}</td>                                                    
+                                                    <td class="text-primary">{{$employeeParticular->profession}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->registration_status}}</td>                                                    
+                                                    <td class="text-primary">{{$employeeParticular->registration_status}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{Helper::getRetirementDate($employee->dob)}}</td>                                                    
+                                                    <td class="text-primary">{{Helper::getRetirementDate($employee->dob)}}</td>
                                                 </tr>
                                             </table>
-                                        </td>                                        
-                                    </tr>                                    
-                                </tbody>                                
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
-                            <!-- /.table-responsive -->                            
+                            <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -128,8 +127,7 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->     
-</div>
+            <!-- /.row -->
 @endsection
 @section('footer')
      @include('layout.footer')
@@ -138,8 +136,8 @@
      <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
     $(document).ready(function() {
-        
-    }); 
+
+    });
     </script>
 
 @endsection

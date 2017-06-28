@@ -12,6 +12,6 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
-        </div>                
+        </div>
     </div>
 </nav>

@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Employee;
+use App\Region;
+use DB;
+use App\EmployeeParticular;
+use App\Profession;
+use App\ProfessionRegistration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Chartjs;
 
 class HomeController extends Controller
@@ -14,7 +21,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-       //$this->middleware('auth');
+       $this->middleware('auth');
     }
 
     /**
@@ -24,38 +31,138 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-     $chartjs = app()->chartjs
-        ->name('lineChartTest')
-        ->type('line')
-        ->size(['width' => 400, 'height' => 200])
-        ->labels(['January', 'February', 'March', 'April', 'May', 'June', 'July'])
-        ->datasets([
-            [
-                "label" => "My First dataset",
-                'backgroundColor' => "rgba(38, 185, 154, 0.31)",
-                'borderColor' => "rgba(38, 185, 154, 0.7)",
-                "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
-                "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
-                "pointHoverBackgroundColor" => "#fff",
-                "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                'data' => [65, 59, 80, 81, 56, 55, 40],
-            ],
-            [
-                "label" => "My Second dataset",
-                'backgroundColor' => "rgba(38, 185, 154, 0.31)",
-                'borderColor' => "rgba(38, 185, 154, 0.7)",
-                "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
-                "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
-                "pointHoverBackgroundColor" => "#fff",
-                "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                'data' => [12, 33, 44, 44, 55, 23, 40],
-            ]
-        ])
-        ->options([]);
 
-        
-        
-        return view('index', compact('chartjs'));
+              // ExampleController.php
+
+         $employees = app()->chartjs
+                 ->name('all_employees')
+                 ->type('pie')
+                 ->size(['width' => 400, 'height' => 200])
+                 ->labels(['Engineers', 'Architects', 'Quantity Surveyors', 'Accountants', 'Others'])
+                 ->datasets([
+                     [
+                         'backgroundColor' => ['#FF6384', '#1ABB9C','#E74C3C','#9B59B6','#31708f'],
+                         'hoverBackgroundColor' =>  ['#FF6384', '#1ABB9C','#E74C3C','#9B59B6','#31708f'],
+                         'data' => [200, 200,100,20,180]
+                     ]
+                 ])
+                 ->options([
+                   'title'=>array(
+                     'display' => true,
+                     'text'=>'All Employees',
+                     'fontSize'=>25,
+                     'padding' =>30,
+                     'fontStyle'=>'bold',
+                     'position'=>'left',
+                     'fontFamily'=>"'Arial', sans-serif"
+                   ),
+                   'legend'=> array(
+                     'display' => true,
+                     'position'=>'right'
+                   ),
+                   'layout'=>array(
+                     'padding'=>array(
+                          'left'=> 0,
+                          'right'=> 0,
+                          'top'=> 0,
+                          'bottom'=> 0
+                     )
+                   )
+                 ]);
+             $mData = $this->getRegionsAndAssociateEmployeesNum();
+             $regions = app()->chartjs
+                         ->name('region_employees')
+                         ->type('horizontalBar')
+                         ->size(['width' => 400, 'height' => 200])
+                         ->labels($mData['regions'])
+                         ->datasets([
+                             [
+                                 "label" => "Regional Employees",
+                                 'backgroundColor' => ['rgba(255, 99, 132, 0.9)', 'rgba(54, 162, 235, 0.9)'],
+                                 'data' => $mData['employees']
+                             ]
+                         ])
+                         ->options([
+                           'title'=>array(
+                             'display' => true,
+                             'text'=>'Regional Employees',
+                             'fontSize'=>25,
+                             'padding' =>30,
+                             'position'=>'left',
+                             'fontStyle'=>'bold',
+                             'fontFamily'=>"'Arial', sans-serif"
+                           ),
+                           'legend'=> array(
+                             'display' => false,
+                             'position'=>'right'
+                           ),
+                           'layout'=>array(
+                             'padding'=>array(
+                                  'left'=> 0,
+                                  'right'=> 0,
+                                  'top'=> 0,
+                                  'bottom'=> 0
+                             )
+                           )
+                         ]);
+         $employeesCategories = $this->getEmployeesCategories();
+         Log::info($mData['employees']);
+        return view('index', compact('employees','regions','employeesCategories'));
+    }
+
+    public function getRegionsAndAssociateEmployeesNum(){
+         $data = array(
+            'regions'=>array(),
+            'employees'=>array()
+         );
+         $regions  = Region::all();
+
+         foreach ($regions as $key => $region) {
+           $data['regions'][] = $region->region;
+           $data['employees'][] = $this->getNumOfEmployeesByRegion($region->region);
+         }
+      return $data;
+    }
+
+    public function getNumOfEmployeesByRegion($region){
+      $employeeParticulars  = EmployeeParticular::all();
+      $count      = 0;
+      foreach ($employeeParticulars as $key => $employeeParticular) {
+          if($employeeParticular->region == $region){
+            $count++;
+          }
+      }
+      return $count;
+    }
+
+    public function getEmployeesCategories(){
+        $numPermanent   = 0;
+        $numTempory     = 0;
+        $numInternship  = 0;
+
+      $employeeParticulars  = EmployeeParticular::all();
+      $count      = 0;
+      foreach ($employeeParticulars as $key => $employeeParticular) {
+          switch($employeeParticular->employment_type){
+                case 'Permanent':
+                     $numPermanent++;
+                  break;
+                case 'Temporary':
+                     $numTempory++;
+                  break;
+                case 'Internship':
+                     $numInternship++;
+                  break;
+          }
+      }
+      $data = array(
+        'all_employees' =>count($employeeParticulars),
+        'permanent'=>$numPermanent,
+        'temporary'=>$numTempory,
+        'internship'=>$numInternship
+      );
+
+
+      return $data;
     }
 }

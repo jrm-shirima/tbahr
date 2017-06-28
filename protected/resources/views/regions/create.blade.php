@@ -12,36 +12,43 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
-<div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Add Region</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-             <form id="formAddRegion" action="{{url('regions')}}" method="POST">
+      <div class="panel panel-default">
+            <div class="panel-heading">
               <div class="row">
-                
-                  {{ csrf_field() }}
+                  <div class="col-lg-12">
+                      <h1 class="">Add Region</h1>
+                  </div>
+                  <!-- /.col-lg-12 -->
+              </div>
+            </div>
+            <div class="panel-body">
+              <form id="formAddRegion" action="{{url('regions')}}" method="POST">
+               <div class="row">
+
+                   {{ csrf_field() }}
+                  <div class="col-lg-6">
+                         <div class="form-group">
+                             <label for="region">Region</label>
+                             <input type="text" class="form-control" id="region" name="region" placeholder="Enter region name">
+                         </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-8 col-sm-8 pull-left" id="output">
+                      <span class="load-spinner"></span>
+                 </div>
+             </div>
+             <div class="row">
                  <div class="col-lg-6">
-                        <div class="form-group">
-                            <label for="region">Region</label>
-                            <input type="text" class="form-control" id="region" name="region" placeholder="Enter region name">
-                        </div>
-                </div>               
+                      <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
+                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-8 col-sm-8 pull-left" id="output">
-                     <span class="load-spinner"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                     <button type="submit" name="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
-                </div>
-           </div>
-        </form>  
-</div>
+         </form>
+      </div>
+    </div>
+
+
+
 @endsection
 @section('footer')
      @include('layout.footer')
@@ -49,23 +56,23 @@
 @section('scripts')
  <script>
      $(document).ready(function(){
-      
+
       var formObject = $("#formAddRegion");
       formObject.on('submit',function(){
-          
+
               var postData = formObject.serializeArray();
               var formURL  = formObject.attr("action");
-            
-                submitData(postData, formURL);         
-          
+
+                submitData(postData, formURL);
+
           return false;
-          });         
-       
-      
-     
+          });
+
+
+
     function submitData(postData, formURL){
-        
-        
+
+
         $.ajax(
                 {
                     url : formURL,
@@ -87,7 +94,7 @@
                            // location.replace('{{url('login')}}');
                         }
                         if( jqXhr.status === 400 ){
-                            
+
                             var errors = jqXhr.responseJSON.errors;
                             var errorsHtml = '<div class="alert alert-danger"><p class="text-uppercase text-bold">There are errors kindly check</p><ul>';
                             $.each(errors, function (key, value) {
@@ -95,19 +102,19 @@
                             });
                             errorsHtml += '</ul></di>';
                             $('#output').html(errorsHtml);
-                            
+
                         }else{
                             $('#output').html(jqXhr.message);
                         }
                     }
                 });
     }
-     
-     
-     
+
+
+
      });
-      
-      
-     
+
+
+
  </script>
 @endsection

@@ -12,7 +12,7 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
-<div id="page-wrapper">
+
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">All Administrators</h1>
@@ -40,10 +40,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+
                                 </tbody>
                             </table>
-                            <!-- /.table-responsive -->                            
+                            <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -51,8 +51,6 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->     
-</div>
 @endsection
 @section('header')
      @include('layout.footer')
@@ -65,7 +63,7 @@
             responsive: true,
             ajax : '{{url("get-admins")}}', //this url load JSON Client details to reduce loading time
         });
-    }); 
+    });
     </script>
 
 @endsection

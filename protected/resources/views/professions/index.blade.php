@@ -12,8 +12,6 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
-
-<div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header">All Professions</h2>
@@ -33,15 +31,15 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Profession Name</th>
-                                        <th>Number of Employees</th>                                        
-                                        <th>Action</th>                                        
+                                        <th>Number of Employees</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+
                                 </tbody>
                             </table>
-                            <!-- /.table-responsive -->                            
+                            <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -49,8 +47,6 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-       
-</div>
 @endsection
 @section('footer')
      @include('layout.footer')
@@ -58,18 +54,17 @@
 @section('scripts')
  <script>
      $(document).ready(function(){
-   
-     
+
+
      //Load all regions and number employees available in.
         $('#professionDataTable').DataTable({
             responsive: true,
             ajax : '{{url("get-professions")}}', //this url load JSON region details to reduce loading time
         });
-  
-     
-     });    
-     
-     
+
+
+     });
+
+
  </script>
 @endsection
-

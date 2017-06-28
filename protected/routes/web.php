@@ -32,6 +32,8 @@ Route::get('get-admins', array(
 //Home routes
 Route::get('/','HomeController@index');
 Route::get('/home','HomeController@index');
+Route::get('/index','HomeController@index');
+Route::get('/dashboard','HomeController@index');
 
 
 //Employee routes

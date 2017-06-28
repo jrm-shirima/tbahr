@@ -12,11 +12,11 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
-<div id="page-wrapper">
+
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header">Add Profession</h2>
-                </div>                
+                </div>
             </div>
            <form id="formProfession" action="{{url('professions')}}" method="POST">
              {{ csrf_field() }}
@@ -25,8 +25,8 @@
                      <div class="form-group">
                         <label for="profession_name">Profession Name </label>
                         <input type="text" class="form-control" id="profession_name" name="profession_name" placeholder="Enter profession name">
-                      </div>                                      
-                   </div>                                  
+                      </div>
+                   </div>
               </div>
              <div class="row">
                 <div class="col-md-8 col-sm-8 pull-left" id="output">
@@ -39,14 +39,14 @@
                 </div>
             </div>
              </form>
-</div>
+
 @endsection
 @section('footer')
      @include('layout.footer')
 @endsection
 @section('scripts')
     <script>
-        
+
         $(document).ready(function(){
                 var formObject = $("#formProfession");
               formObject.on('submit',function(){
@@ -54,10 +54,10 @@
                       var postData = formObject.serializeArray();
                       var formURL  = formObject.attr("action");
 
-                        submitData(postData, formURL);         
+                        submitData(postData, formURL);
 
                   return false;
-                  });         
+                  });
 
 
 
@@ -103,8 +103,8 @@
                         });
             }
 
-             });     
-     
+             });
+
  </script>
      </script>
 @endsection

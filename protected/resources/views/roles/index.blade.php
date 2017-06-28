@@ -1,15 +1,17 @@
 @extends('layout.master')
 @section('page-title')
-    {{"Roles"}}
+    {{"Home"}}
 @endsection
 @section('header')
      @include('layout.header')
 @endsection
-@section('main-right-navigation')
-     @include('layout.main-right-navigation')
+@section('left-navigation')
+     @include('layout.left-navigation')
 @endsection
-@section('main-home')
-    <div id="page-wrapper">
+@section('top-navigation')
+     @include('layout.top-navigation')
+@endsection
+@section('page-content')
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Roles</h1>
@@ -29,23 +31,23 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Role Name</th>
-                                        <th>Number of Admins</th>                                        
-                                        <th>Action</th>                                        
+                                        <th>Number of Admins</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                             <tbody>
 
                             </tbody>
                         </table>
-                        <!-- /.table-responsive -->                            
+                        <!-- /.table-responsive -->
                     </div>
                     <!-- /.panel-body -->
                 </div>
                 <!-- /.panel -->
             </div>
             <!-- /.col-lg-12 -->
-        </div>           
-    </div>
+        </div>
+
 @endsection
 @section('footer')
      @include('layout.footer')
@@ -58,7 +60,7 @@
             responsive: true,
             ajax : '{{url("get-roles")}}', //this url load JSON Client details to reduce loading time
         });
-    }); 
+    });
     </script>
 
 @endsection
