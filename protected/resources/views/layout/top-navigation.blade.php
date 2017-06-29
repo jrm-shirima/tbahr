@@ -9,7 +9,9 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="{{asset("protected/storage/uploads/images/img.jpg")}}" alt="">{{Auth::user()->first_name}} {{Auth::user()->last_name}}
+                    @if(Auth::check())
+                      <img src="{{asset("protected/storage/uploads/images/img.jpg")}}" alt="">{{Auth::user()->first_name}} {{Auth::user()->last_name}}
+                    @endif
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

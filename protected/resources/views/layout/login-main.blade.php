@@ -40,20 +40,24 @@
 
     <!-- /global stylesheets -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
     <!--Tbahr Css-->
     <link href="{{asset("protected/assets/css/tbahr.min.css")}}" rel="stylesheet" type="text/css">
+    <style>
+     .page-header {
+        padding-bottom: 9px;
+        margin: 0px 0 0px !important;
+        border-bottom: 1px solid #eee;
+    }
+    </style>
+
 </head>
 
 <body class="nav-md">
      <div class="container body">
           <div class="main_container">
-                 @yield('left-navigation')
-                 @yield('top-navigation')
-                  <!-- page content -->
-                <div class="right_col" role="main">
                    @yield('page-content')
-                 </div>
-                 @yield('footer')
           </div>
     </div>
 

@@ -72,43 +72,36 @@
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-6">
                     <div>
-                      <?php
-                        $all  =                 ($employeesCategories['all_employees']/$employeesCategories['all_employees']) * 100;
-                        $permanent  =           ($employeesCategories['permanent']/$employeesCategories['all_employees']) * 100;
-                        $temporary  =           ($employeesCategories['temporary']/$employeesCategories['all_employees']) * 100;
-                        $internship =           ($employeesCategories['internship']/$employeesCategories['all_employees']) * 100;
-                      ?>
-
-                      <p>All Employees <span class="red" >{{$all}}%</span></p>
+                      <p>All Employees <span class="red" >{{$empCatPercentages['all']}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$all}}"></div>
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['all']}}"></div>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <p>Permanent <span class="red" >{{$permanent}}%</span></p>
+                      <p>Permanent <span class="red" >{{$empCatPercentages['permanent']}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$permanent}}"></div>
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['permanent']}}"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-6">
                     <div>
-                      <p>Temporary <span class="red" >{{$temporary}}%</span></p>
+                      <p>Temporary <span class="red" >{{$empCatPercentages['temporary']}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$temporary}}"></div>
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['temporary']}}"></div>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <p>Internship <span class="red" >{{$internship}}%</span></p>
+                      <p>Internship <span class="red" >{{$empCatPercentages['internship']}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$internship}}"></div>
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['internship']}}"></div>
                         </div>
                       </div>
                     </div>

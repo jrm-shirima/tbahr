@@ -30,8 +30,10 @@
                 <img src="{{asset("protected/storage/uploads/images/img.jpg")}}" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
+                @if(Auth::check())
                 <span>Welcome,</span>
                 <h2>{{Auth::user()->first_name}} {{Auth::user()->last_name}}</h2>
+                @endif
               </div>
             </div>
             <!-- /menu profile quick info -->

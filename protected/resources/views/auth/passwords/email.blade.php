@@ -1,12 +1,11 @@
-@extends('layout.master')
+@extends('layout.login-main')
 @section('page-title')
     {{"Add Employee"}}
 @endsection
 @section('page-content')
 @include('auth.auth-header')
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+  <section class="inner-wraper">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
                 <div class="panel-body">
@@ -44,6 +43,6 @@
                 </div>
             </div>
         </div>
-    </div>
+  </section>
 
 @endsection

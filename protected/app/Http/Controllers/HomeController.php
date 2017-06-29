@@ -105,9 +105,9 @@ class HomeController extends Controller
                              )
                            )
                          ]);
-         $employeesCategories = $this->getEmployeesCategories();
-         Log::info($mData['employees']);
-        return view('index', compact('employees','regions','employeesCategories'));
+         $empCatPercentages = $this->getEmployeCategoriesPercentages();
+         Log::info($empCatPercentages);
+        return view('index', compact('employees','regions','empCatPercentages'));
     }
 
     public function getRegionsAndAssociateEmployeesNum(){
@@ -134,7 +134,7 @@ class HomeController extends Controller
       }
       return $count;
     }
-
+    //Load all employees, and number of each category
     public function getEmployeesCategories(){
         $numPermanent   = 0;
         $numTempory     = 0;
@@ -164,5 +164,22 @@ class HomeController extends Controller
 
 
       return $data;
+    }
+   //Get the employee category percentages
+    public function getEmployeCategoriesPercentages(){
+
+      $employeesCategories = $this->getEmployeesCategories();
+      $all  =         ($employeesCategories['all_employees']/$employeesCategories['all_employees']) * 100;
+      $permanent  =   ($employeesCategories['permanent']/$employeesCategories['all_employees']) * 100;
+      $temporary  =   ($employeesCategories['temporary']/$employeesCategories['all_employees']) * 100;
+      $internship =   ($employeesCategories['internship']/$employeesCategories['all_employees']) * 100;
+
+      return array(
+        'all'=> $all,
+        'permanent'=>$permanent,
+        'temporary'=>$temporary,
+        'internship'=>$internship
+      );
+
     }
 }
