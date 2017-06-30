@@ -21,7 +21,7 @@ class CreateEmployeeParticularsTable extends Migration
             $table->date('employment_date');
             $table->string('region'); 
             $table->string('profession');
-            $table->string('registration_status');  
+            $table->string('registration_status');
             $table->timestamps();
             $table->foreign('employee_id')->references('id')->on('employees')
                 ->onUpdate('cascade')->onDelete('cascade');

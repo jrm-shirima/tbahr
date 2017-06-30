@@ -23,33 +23,33 @@
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top">Total Employees</span>
-              <div class="count">700</div>
-              <span class="count_bottom"><i class="">100% registered</i></span>
+              <div class="count">{{$professionDistribution['all']}}</div>
+              <span class="count_bottom"><i class="">{{100}}% registered</i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top">Engineers</span>
-              <div class="count blue">200</div>
-              <span class="count_bottom"><i class="blue"><i class="fa fa-sort-asc"></i>30% of all employees</i></span>
+              <div class="count blue">{{$professionDistribution['engineers']}}</div>
+              <span class="count_bottom"><i class="blue"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['engineers']/$professionDistribution['all'])* 100)}}% of all employees</i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Architects</span>
-              <div class="count green">200</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>30% of all employees</i></span>
+              <div class="count green">{{$professionDistribution['architects']}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['architects']/$professionDistribution['all'])* 100)}}% of all employees</i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Quantity Surveyors</span>
-              <div class="count red">100</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>15% of all employees </i></span>
+              <div class="count red">{{$professionDistribution['quantitySurveyors']}}</div>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>{{round(($professionDistribution['quantitySurveyors']/$professionDistribution['all'])* 100)}}% of all employees </i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Accountants</span>
-              <div class="count purple">20</div>
-              <span class="count_bottom"><i class="purple"><i class="fa fa-sort-asc"></i>10% of all employees </i></span>
+              <div class="count purple">{{$professionDistribution['accountants']}}</div>
+              <span class="count_bottom"><i class="purple"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['accountants']/$professionDistribution['all'])* 100)}}% of all employees </i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Others</span>
-              <div class="count text-info">180</div>
-              <span class="count_bottom"><i class="text-info"><i class="fa fa-sort-asc"></i>20% of all employees</i></span>
+              <div class="count text-info">{{$professionDistribution['others']}}</div>
+              <span class="count_bottom"><i class="text-info"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['others']/$professionDistribution['all'])* 100)}}% of all employees</i></span>
             </div>
           </div>
           <!-- /top tiles -->
@@ -72,7 +72,7 @@
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-6">
                     <div>
-                      <p>All Employees <span class="red" >{{$empCatPercentages['all']}}%</span></p>
+                      <p>All Employees <span class="red" >{{round($empCatPercentages['all'])}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['all']}}"></div>
@@ -80,7 +80,7 @@
                       </div>
                     </div>
                     <div>
-                      <p>Permanent <span class="red" >{{$empCatPercentages['permanent']}}%</span></p>
+                      <p>Permanent <span class="red" >{{round($empCatPercentages['permanent'])}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['permanent']}}"></div>
@@ -90,7 +90,7 @@
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-6">
                     <div>
-                      <p>Temporary <span class="red" >{{$empCatPercentages['temporary']}}%</span></p>
+                      <p>Temporary <span class="red" >{{round($empCatPercentages['temporary'])}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['temporary']}}"></div>
@@ -98,7 +98,7 @@
                       </div>
                     </div>
                     <div>
-                      <p>Internship <span class="red" >{{$empCatPercentages['internship']}}%</span></p>
+                      <p>Internship <span class="red" >{{round($empCatPercentages['internship'])}}%</span></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$empCatPercentages['internship']}}"></div>
