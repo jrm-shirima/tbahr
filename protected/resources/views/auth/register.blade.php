@@ -95,7 +95,7 @@
                                      <div class="col-md-8">
                                     <select class="form-control" id="role" name="role">
                                       @foreach($roles as $role)
-                                        <option value="{{$role->role}}" >{{$role->role}}</option>
+                                        <option value="{{$role->id}}" >{{$role->name}}</option>
                                        @endforeach
                                      </select>
                                     </div>

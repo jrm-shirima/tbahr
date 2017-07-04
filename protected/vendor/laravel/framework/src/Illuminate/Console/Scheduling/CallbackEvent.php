@@ -60,6 +60,10 @@ class CallbackEvent extends Event
             return;
         }
 
+        register_shutdown_function(function () {
+            $this->removeMutex();
+        });
+
         try {
             $response = $container->call($this->callback, $this->parameters);
         } finally {
@@ -97,6 +101,8 @@ class CallbackEvent extends Event
                 "A scheduled event name is required to prevent overlapping. Use the 'name' method before 'withoutOverlapping'."
             );
         }
+
+        $this->withoutOverlapping = true;
 
         return $this->skip(function () {
             return $this->mutex->exists($this);

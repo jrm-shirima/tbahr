@@ -29,27 +29,27 @@
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top">Engineers</span>
               <div class="count blue">{{$professionDistribution['engineers']}}</div>
-              <span class="count_bottom"><i class="blue"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['engineers']/$professionDistribution['all'])* 100)}}% of all employees</i></span>
+              <span class="count_bottom"><i class="blue"><i class="fa fa-sort-asc"></i>@if($professionDistribution['all']){{round(($professionDistribution['engineers']/$professionDistribution['all'])* 100)}}% @else 0% @endif of all employees</i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Architects</span>
               <div class="count green">{{$professionDistribution['architects']}}</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['architects']/$professionDistribution['all'])* 100)}}% of all employees</i></span>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>@if($professionDistribution['all']){{round(($professionDistribution['architects']/$professionDistribution['all'])* 100)}}% @else 0% @endif of all employees</i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Quantity Surveyors</span>
               <div class="count red">{{$professionDistribution['quantitySurveyors']}}</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>{{round(($professionDistribution['quantitySurveyors']/$professionDistribution['all'])* 100)}}% of all employees </i></span>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>@if($professionDistribution['all']){{round(($professionDistribution['quantitySurveyors']/$professionDistribution['all'])* 100)}}% @else 0% @endif of all employees </i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Accountants</span>
               <div class="count purple">{{$professionDistribution['accountants']}}</div>
-              <span class="count_bottom"><i class="purple"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['accountants']/$professionDistribution['all'])* 100)}}% of all employees </i></span>
+              <span class="count_bottom"><i class="purple"><i class="fa fa-sort-asc"></i>@if($professionDistribution['all']){{round(($professionDistribution['accountants']/$professionDistribution['all'])* 100)}}% @else 0% @endif of all employees </i></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Others</span>
               <div class="count text-info">{{$professionDistribution['others']}}</div>
-              <span class="count_bottom"><i class="text-info"><i class="fa fa-sort-asc"></i>{{round(($professionDistribution['others']/$professionDistribution['all'])* 100)}}% of all employees</i></span>
+              <span class="count_bottom"><i class="text-info"><i class="fa fa-sort-asc"></i>@if($professionDistribution['all']){{round(($professionDistribution['others']/$professionDistribution['all'])* 100)}}% @else 0% @endif of all employees</i></span>
             </div>
           </div>
           <!-- /top tiles -->

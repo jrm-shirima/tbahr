@@ -51,3 +51,21 @@ section.inner-wraper{
   height: auto;
 
 }
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.nav.side-menu>li.active, .nav.side-menu>li.current-page{
+    border-right: 5px solid #5cb85c;
+}
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}

@@ -17,7 +17,7 @@ class CreateProfessionRegistrationsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('profession_reg_name');
-            $table->timestamps(); 
+            $table->timestamps();
         });
     }
 
@@ -28,8 +28,6 @@ class CreateProfessionRegistrationsTable extends Migration
      */
     public function down()
     {
-        Schema::create('profession_registrations', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('profession_registrations');
     }
 }

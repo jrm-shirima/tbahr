@@ -178,6 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Fx3costa\LaravelChartJs\Providers\ChartjsServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
     ],
 
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Chartjs'=>Fx3costa\LaravelChartJs\Providers\ChartjsServiceProvider::class,
         'Helper' => App\Helpers\Helper::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
 
     ],
 

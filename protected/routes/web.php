@@ -38,7 +38,7 @@ Route::get('/dashboard','HomeController@index');
 
 //Employee routes
 Route::resource('employees', 'EmployeeController',['only' => [
-    'index', 'show','create','store'
+    'index', 'show','create','store','edit'
 ]]);
 Route::get('get-employees','EmployeeController@getJSonEmployeesData');
 Route::get('employees/profession/{id}','EmployeeController@showEmployeesByProfession');
@@ -58,10 +58,10 @@ Route::get('get-employees-report/{reg_status}/{wStation}/{emp_type}/{requestBy}'
 
 
 //Role routes
-Route::resource('roles', 'RoleController',['only' => [
+Route::resource('roles', 'RoleAndPermissionController',['only' => [
     'index', 'show','create','store'
 ]]);
-Route::get('get-roles','RoleController@getJSonRolesData');
+Route::get('get-roles','RoleAndPermissionController@getJSonRolesData');
 
 //Role Professions
 Route::resource('professions', 'ProfessionController',['only' => [

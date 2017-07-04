@@ -64,7 +64,7 @@
             <!-- /.row -->
 
 @endsection
-@section('header')
+@section('footer')
      @include('layout.footer')
 @endsection
 @section('scripts')

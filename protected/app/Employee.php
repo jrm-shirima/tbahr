@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
-    public function employeeParticulars(){
+    public function employeeParticular(){
         return $this->hasOne('\App\EmployeeParticular', 'employee_id');
     }
 }

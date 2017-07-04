@@ -151,15 +151,15 @@ class RegionController extends Controller
         //
     }
 
-    public function getNumberOfAssignedEmployee($region){
+    public function getNumberOfAssignedEmployee($region_name){
 
       $employees = Employee::all();
       $count     = 0;
 
       foreach($employees as $employee){
-          $particular  = $employee->employeeParticulars;
-
-          if($particular->region == $region){
+          $employeeParticular  = $employee->employeeParticular;
+          $region  = Region::find($employeeParticular->region_id);
+          if($region->region == $region_name){
               $count++;
           }
       }

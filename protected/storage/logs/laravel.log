@@ -1,0 +1,92 @@
+[2017-07-04 00:54:07] local.INFO: Profession Particular  
+[2017-07-04 00:54:07] local.INFO: {"id":1,"profession_name":"ICT Engineer","created_at":"2017-06-24 23:39:58","updated_at":"2017-06-24 23:39:58"}  
+[2017-07-04 00:54:07] local.INFO: Profession Particular  
+[2017-07-04 00:54:07] local.INFO: {"id":4,"profession_name":"Architect","created_at":"2017-06-30 04:40:24","updated_at":"2017-06-30 04:40:24"}  
+[2017-07-04 00:54:07] local.INFO: array (
+  'all' => 2,
+  'engineers' => 1,
+  'architects' => 1,
+  'quantitySurveyors' => 0,
+  'accountants' => 0,
+  'others' => 0,
+  'data' => 
+  array (
+    0 => 'ICT Engineer',
+    1 => 'Architect',
+  ),
+  'compare' => 
+  array (
+    0 => false,
+    1 => false,
+  ),
+)  
+[2017-07-04 00:56:51] local.INFO: Profession Particular  
+[2017-07-04 00:56:51] local.INFO: {"id":1,"profession_name":"ICT Engineer","created_at":"2017-06-24 23:39:58","updated_at":"2017-06-24 23:39:58"}  
+[2017-07-04 00:56:51] local.INFO: Profession Particular  
+[2017-07-04 00:56:51] local.INFO: {"id":4,"profession_name":"Architect","created_at":"2017-06-30 04:40:24","updated_at":"2017-06-30 04:40:24"}  
+[2017-07-04 00:56:51] local.INFO: array (
+  'all' => 2,
+  'engineers' => 1,
+  'architects' => 1,
+  'quantitySurveyors' => 0,
+  'accountants' => 0,
+  'others' => 0,
+  'data' => 
+  array (
+    0 => 'ICT Engineer',
+    1 => 'Architect',
+  ),
+  'compare' => 
+  array (
+    0 => false,
+    1 => false,
+  ),
+)  
+[2017-07-04 00:59:27] local.INFO: array (
+  0 => 'Otoman Nkomanya',
+  1 => 'Songwe',
+  2 => 'ICT Engineer',
+  3 => 'Bachelor',
+  4 => 'Graduate Engineer',
+  5 => '<span id="2">
+              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
+             </span>
+             <span id="2">
+                 <a href="http://localhost/tbahr/employees/2/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
+                </span>',
+)  
+[2017-07-04 00:59:27] local.INFO: array (
+  0 => 'Otoman Nkomanya',
+  1 => 'Mwanza',
+  2 => 'Architect',
+  3 => 'Bachelor',
+  4 => 'Graduate Engineer',
+  5 => '<span id="3">
+              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
+             </span>
+             <span id="3">
+                 <a href="http://localhost/tbahr/employees/3/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
+                </span>',
+)  
+[2017-07-04 00:59:47] local.INFO: Profession Particular  
+[2017-07-04 00:59:47] local.INFO: {"id":1,"profession_name":"ICT Engineer","created_at":"2017-06-24 23:39:58","updated_at":"2017-06-24 23:39:58"}  
+[2017-07-04 00:59:47] local.INFO: Profession Particular  
+[2017-07-04 00:59:47] local.INFO: {"id":4,"profession_name":"Architect","created_at":"2017-06-30 04:40:24","updated_at":"2017-06-30 04:40:24"}  
+[2017-07-04 00:59:47] local.INFO: array (
+  'all' => 2,
+  'engineers' => 1,
+  'architects' => 1,
+  'quantitySurveyors' => 0,
+  'accountants' => 0,
+  'others' => 0,
+  'data' => 
+  array (
+    0 => 'ICT Engineer',
+    1 => 'Architect',
+  ),
+  'compare' => 
+  array (
+    0 => false,
+    1 => false,
+  ),
+)  

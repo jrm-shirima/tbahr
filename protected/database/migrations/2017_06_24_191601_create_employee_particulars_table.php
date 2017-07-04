@@ -19,12 +19,19 @@ class CreateEmployeeParticularsTable extends Migration
             $table->string('employment_type');
             $table->string('education');
             $table->date('employment_date');
-            $table->string('region'); 
-            $table->string('profession');
-            $table->string('registration_status');
+            $table->integer('region_id')->unsigned();
+            $table->integer('profession_id')->unsigned();
+            $table->integer('prof_reg_status_id')->unsigned();
             $table->timestamps();
+
             $table->foreign('employee_id')->references('id')->on('employees')
-                ->onUpdate('cascade')->onDelete('cascade');
+                  ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('region_id')->references('id')->on('regions')
+                  ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('profession_id')->references('id')->on('professions')
+                  ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('prof_reg_status_id')->references('id')->on('profession_registrations')
+                  ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

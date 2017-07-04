@@ -103,13 +103,13 @@
                                                     <td class="text-primary">{{Helper::getFormattedDate($employeeParticular->employment_date)}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->region}}</td>
+                                                    <td class="text-primary">{{$region->region}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->profession}}</td>
+                                                    <td class="text-primary">{{$profession->profession_name}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">{{$employeeParticular->registration_status}}</td>
+                                                    <td class="text-primary">{{$professionRegistration->profession_reg_name}}</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-primary">{{Helper::getRetirementDate($employee->dob)}}</td>

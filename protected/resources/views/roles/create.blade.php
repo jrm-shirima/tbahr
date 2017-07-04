@@ -31,6 +31,15 @@
                         <label for="rele">Role</label>
                         <input type="text" class="form-control" id="role" name="role" placeholder="Enter role name">
                     </div>
+                    <div class="form-group">
+                        <label for="rele">Add role capability</label>
+                    </div>
+                    <div class="checkbox">
+                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="read">Read</label>
+                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="write">Write</label>
+                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="modify">Modify</label>
+                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="fullcontrol">Full Control</label>
+                   </div>
             </div>
         </div>
         <div class="row">

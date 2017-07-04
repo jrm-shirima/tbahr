@@ -8,6 +8,7 @@ use App\EmployeeParticular;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Log;
 
 class ProfessionRegistrationController extends Controller
 {
@@ -149,15 +150,17 @@ class ProfessionRegistrationController extends Controller
     {
         //
     }
-    public function getNumberOfAssignedEmployee($profession){
-
+    public function getNumberOfAssignedEmployee($profession_reg_name){
+        Log::info($profession_reg_name);
         $employees = Employee::all();
         $count     = 0;
 
         foreach($employees as $employee){
-            $particular  = $employee->employeeParticulars;
+            $employeeParticular  = $employee->employeeParticular;
+            $professionReg   = ProfessionRegistration::find($employeeParticular->prof_reg_status_id);
 
-            if($particular->registration_status == $profession){
+
+            if($professionReg->profession_reg_name == $profession_reg_name){
                 $count++;
             }
         }

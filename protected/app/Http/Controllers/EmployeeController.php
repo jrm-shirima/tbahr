@@ -11,6 +11,7 @@ use App\ProfessionRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Log;
 
 
 class EmployeeController extends Controller
@@ -94,9 +95,9 @@ class EmployeeController extends Controller
                 $employeeParticular->employment_type =  $request->employment_type;
                 $employeeParticular->employment_date =  $request->employment_date;
                 $employeeParticular->education       =  $request->education;
-                $employeeParticular->registration_status =  $request->registration_status;
-                $employeeParticular->profession =  $request->profession;
-                $employeeParticular->region     =  $request->region;
+                $employeeParticular->prof_reg_status_id =  $request->registration_status;
+                $employeeParticular->profession_id =  $request->profession;
+                $employeeParticular->region_id     =  $request->region;
                 $employeeParticular->save();
 
 
@@ -134,19 +135,8 @@ class EmployeeController extends Controller
         $records["data"] = array();
         $count=1;
         foreach($employees as $employee) {
-
-            $employeeParticular = $employee->employeeParticulars;
-            $records["data"][] = array(
-                $employee->first_name.' '.$employee->last_name,
-                $employeeParticular->region,
-                $employeeParticular->profession,
-                $employeeParticular->education,
-                $employeeParticular->registration_status,
-                '<span id="'.$employee->id.'">
-                    <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                   </span>',
-
-            );
+          Log::info($this->getListOfEmployees($employee));
+            $records["data"][] = $this->getListOfEmployees($employee);
         }
         $records["draw"] = $sEcho;
         $records["recordsTotal"] = $iTotalRecords;
@@ -164,9 +154,12 @@ class EmployeeController extends Controller
 
         //Show name, Registration status, retirement Date, Profession, Region
         $employee = Employee::find($id);
-        $employeeParticular = $employee->employeeParticulars;
+        $employeeParticular = $employee->employeeParticular;
+        $region      = Region::find($employeeParticular->region_id);
+        $profession  = Profession::find($employeeParticular->profession_id);
+        $professionRegistration = ProfessionRegistration::find($employeeParticular->prof_reg_status_id);
 
-        return view('employees.show',compact('employee','employeeParticular'));
+        return view('employees.show',compact('employee','employeeParticular','region','profession','professionRegistration'));
     }
     public function showEmployeesByRegion($id){
       $region = Region::find($id);
@@ -180,8 +173,7 @@ class EmployeeController extends Controller
     }
     public function getJSONEmployeesByRegion($id){
       $region = Region::find($id);
-      $employeeParticulars = DB::table('employee_particulars')->where('region', '=', $region->region)->get();
-
+      $employeeParticulars = EmployeeParticular::where('region_id', '=', $region->id)->get();
       $iTotalRecords =count($employeeParticulars);
       $sEcho = intval(10);
       $records = array();
@@ -190,18 +182,7 @@ class EmployeeController extends Controller
      foreach($employeeParticulars as $key => $employeeParticular){
           $employee   = Employee::find($employeeParticular->employee_id);
           $employeeParticular = $employee->employeeParticulars;
-
-          $records["data"][] = array(
-              $employee->first_name.' '.$employee->last_name,
-              $employeeParticular->region,
-              $employeeParticular->profession,
-              $employeeParticular->education,
-              $employeeParticular->registration_status,
-              '<span id="'.$employee->id.'">
-                  <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                 </span>',
-
-          );
+          $records["data"][] = $this->getListOfEmployees($employee);
       }
       $records["draw"] = $sEcho;
       $records["recordsTotal"] = $iTotalRecords;
@@ -210,7 +191,7 @@ class EmployeeController extends Controller
     }
     public function getJSONEmployeesByProfession($id){
         $profession = Profession::find($id);
-        $employeeParticulars = DB::table('employee_particulars')->where('profession', '=', $profession->profession_name)->get();
+        $employeeParticulars = EmployeeParticular::where('profession_id', '=', $profession->id)->get();
 
         $iTotalRecords =count($employeeParticulars);
         $sEcho = intval(10);
@@ -220,18 +201,7 @@ class EmployeeController extends Controller
        foreach($employeeParticulars as $key => $employeeParticular){
             $employee   = Employee::find($employeeParticular->employee_id);
             $employeeParticular = $employee->employeeParticulars;
-
-            $records["data"][] = array(
-                $employee->first_name.' '.$employee->last_name,
-                $employeeParticular->region,
-                $employeeParticular->profession,
-                $employeeParticular->education,
-                $employeeParticular->registration_status,
-                '<span id="'.$employee->id.'">
-                    <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                   </span>',
-
-            );
+            $records["data"][] = $this->getListOfEmployees($employee);
         }
         $records["draw"] = $sEcho;
         $records["recordsTotal"] = $iTotalRecords;
@@ -246,7 +216,7 @@ class EmployeeController extends Controller
 
     public function getJSONEmployeesByProfessionRegStatus($id){
         $professionReg = ProfessionRegistration::find($id);
-        $employeeParticulars = DB::table('employee_particulars')->where('registration_status', '=', $professionReg->profession_reg_name)->get();
+        $employeeParticulars = EmployeeParticular::where('prof_reg_status_id', '=', $professionReg->id)->get();
 
         $iTotalRecords =count($employeeParticulars);
         $sEcho = intval(10);
@@ -256,18 +226,7 @@ class EmployeeController extends Controller
        foreach($employeeParticulars as $key => $employeeParticular){
             $employee   = Employee::find($employeeParticular->employee_id);
             $employeeParticular = $employee->employeeParticulars;
-
-            $records["data"][] = array(
-                $employee->first_name.' '.$employee->last_name,
-                $employeeParticular->region,
-                $employeeParticular->profession,
-                $employeeParticular->education,
-                $employeeParticular->registration_status,
-                '<span id="'.$employee->id.'">
-                    <a href="'.url("employees").'/'.$employee->id.'" title="View more Employee details" class="btn btn-icon-only"> <i class="fa fa-eye text-primary" aria-hidden="true"></i> View more details</a>
-                   </span>',
-
-            );
+            $records["data"][] = $this->getListOfEmployees($employee);
         }
         $records["draw"] = $sEcho;
         $records["recordsTotal"] = $iTotalRecords;
@@ -280,8 +239,13 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    public function edit(Employee $employee){
-        //
+    public function edit($id){
+        $employee = Employee::find($id);
+        $employeeParticular = $employee->employeeParticulars;
+        $professions      = Profession::all();
+        $professionRegs   = ProfessionRegistration::all();
+        $regions          = Region::all();
+      return view('employees.edit', compact('employee','employeeParticular','regions','professions','professionRegs'));
     }
 
 
@@ -309,4 +273,26 @@ class EmployeeController extends Controller
         //
     }
 
+    public function getListOfEmployees(Employee $employee){
+
+      $employeeParticular = $employee->employeeParticular;
+      $region      = Region::find($employeeParticular->region_id);
+      $profession  = Profession::find($employeeParticular->profession_id);
+      $professionRegistration = professionRegistration::find($employeeParticular->prof_reg_status_id);
+
+      return array(
+          $employee->first_name.' '.$employee->last_name,
+          $region->region,
+          $profession->profession_name,
+          $employeeParticular->education,
+          $professionRegistration->profession_reg_name,
+          '<span id="'.$employee->id.'">
+              <a href="'.url("employees").'/'.$employee->id.'" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
+             </span>
+             <span id="'.$employee->id.'">
+                 <a href="'.url("employees").'/'.$employee->id.'/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
+                </span>',
+
+      );
+    }
 }

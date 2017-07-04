@@ -35,11 +35,11 @@ class HomeController extends Controller
               // ExampleController.php
          $empCatPercentages = $this->getEmployeCategoriesPercentages();
          $professionDistribution = $this->getEmployeesProfessionDistributionNum();
-
+        Log::info($professionDistribution );
          //Create Pie Chart
          $employees = app()->chartjs
                  ->name('all_employees')
-                 ->type('pie')
+                 ->type('bar')
                  ->size(['width' => 400, 'height' => 200])
                  ->labels(['Engineers', 'Architects', 'Quantity Surveyors', 'Accountants', 'Others'])
                  ->datasets([
@@ -56,7 +56,15 @@ class HomeController extends Controller
                      ]
                  ])
                  ->options([
-                   'title'=>array(
+                    'scales'=>[
+                      'yAxes'=> [ array(
+                          'ticks'=>[
+                              'beginAtZero'=>true
+                              ]
+                            )
+                          ]
+                       ],
+                     'title'=>array(
                      'display' => true,
                      'text'=>'All Employees',
                      'fontSize'=>25,
@@ -66,7 +74,7 @@ class HomeController extends Controller
                      'fontFamily'=>"'Arial', sans-serif"
                    ),
                    'legend'=> array(
-                     'display' => true,
+                     'display' => false,
                      'position'=>'right'
                    ),
                    'layout'=>array(
@@ -81,8 +89,8 @@ class HomeController extends Controller
              $mData = $this->getRegionsAndAssociateEmployeesNum();
              $regions = app()->chartjs
                          ->name('region_employees')
-                         ->type('horizontalBar')
-                         ->size(['width' => 400, 'height' => 200])
+                         ->type('pie')
+                         ->size(['width' => 450, 'height' => 200])
                          ->labels($mData['regions'])
                          ->datasets([
                              [
@@ -93,7 +101,7 @@ class HomeController extends Controller
                              ]
                          ])
                          ->options([
-                           'title'=>array(
+                          'title'=>array(
                              'display' => true,
                              'text'=>'Regional Employees',
                              'fontSize'=>25,
@@ -103,7 +111,7 @@ class HomeController extends Controller
                              'fontFamily'=>"'Arial', sans-serif"
                            ),
                            'legend'=> array(
-                             'display' => false,
+                             'display' => true,
                              'position'=>'right'
                            ),
                            'layout'=>array(
@@ -116,7 +124,7 @@ class HomeController extends Controller
                            )
                          ]);
 
-        Log::info($professionDistribution);
+
         return view('index', compact('employees','regions','empCatPercentages','professionDistribution'));
     }
 
@@ -138,7 +146,7 @@ class HomeController extends Controller
       $employeeParticulars  = EmployeeParticular::all();
       $count      = 0;
       foreach ($employeeParticulars as $key => $employeeParticular) {
-          if($employeeParticular->region == $region){
+          if(Region::find($employeeParticular->region_id)->region == $region){
             $count++;
           }
       }
@@ -179,10 +187,21 @@ class HomeController extends Controller
     public function getEmployeCategoriesPercentages(){
 
       $employeesCategories = $this->getEmployeesCategories();
-      $all  =         ($employeesCategories['all_employees']/$employeesCategories['all_employees']) * 100;
-      $permanent  =   ($employeesCategories['permanent']/$employeesCategories['all_employees']) * 100;
-      $temporary  =   ($employeesCategories['temporary']/$employeesCategories['all_employees']) * 100;
-      $internship =   ($employeesCategories['internship']/$employeesCategories['all_employees']) * 100;
+        if ($employeesCategories['all_employees']) {
+
+            $sumEmp  = $employeesCategories['all_employees'];
+            $all  =         100;
+            $permanent  =   ($employeesCategories['permanent']/$sumEmp) * 100;
+            $temporary  =   ($employeesCategories['temporary']/$sumEmp) * 100;
+            $internship =   ($employeesCategories['internship']/$sumEmp) * 100;
+
+        }else{
+            $all  = 0;
+            $permanent = 0;
+            $temporary = 0;
+            $internship = 0;
+          }
+
 
       return array(
         'all'=> $all,
@@ -234,42 +253,36 @@ class HomeController extends Controller
             );
         foreach($employees as $e => $employee) {
 
-              $employeeParticulars = $this->getAllEmployeeParticulars($employee->id);
+                $employeeParticular = $employee->employeeParticular;
+                //$profession_id  = $employeeParticular->profession_id;
+                $profession  = Profession::find($employeeParticular->profession_id);
+                Log::info("Profession Particular");
+                Log::info($profession);
+                $distrubNum['data'][] = $profession->profession_name;
+                $distrubNum['compare'][] =strripos(trim($profession->profession_name),$profDistribution[3],0);
 
-              foreach ($employeeParticulars as $k => $employeeParticular) {
-                $distrubNum['data'][] =$employeeParticular->profession;
-                $distrubNum['compare'][] =strripos(trim($employeeParticular->profession),$profDistribution[3],0);
-                if(strripos(trim($employeeParticular->profession),$profDistribution[0],0)){
+                if(strripos(trim($profession->profession_name),$profDistribution[0],0)){
                    $engineers++;
                    $distrubNum['engineers'] =  $engineers;
-                }elseif(strripos(trim($employeeParticular->profession),$profDistribution[1],0)){
+                }elseif(strripos(trim($profession->profession_name),$profDistribution[1],0)){
                    $architects++;
                    $distrubNum['architects'] =  $architects;
-                }elseif(strripos(trim($employeeParticular->profession),$profDistribution[2],0)){
+                }elseif(strripos(trim($profession->profession_name),$profDistribution[2],0)){
                    $quantitySurveyors++;
                     $distrubNum['quantitySurveyors'] =  $quantitySurveyors;
-                }elseif(strripos(trim($employeeParticular->profession),$profDistribution[3],0)){
+                }elseif(strripos(trim($profession->profession_name),$profDistribution[3],0)){
                    $accountants++;
                    $distrubNum['accountants'] = $accountants;
                 }else{
                    $others++;
                    $distrubNum['others'] = $others;
                 }
-              }
-
-
         }
       return $distrubNum;
   }
 
   public function getAllEmployees(){
     return Employee::all();
-  }
-
-  public function getAllEmployeeParticulars($id){
-    return DB::table('employee_particulars')
-                ->where('employee_id', '=', $id)
-                ->get();
   }
 
 }

@@ -10,6 +10,7 @@ use App\EmployeeParticular;
 use App\Profession;
 use App\ProfessionRegistration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class EmployeeReportController extends Controller{
 
@@ -45,19 +46,13 @@ class EmployeeReportController extends Controller{
          $data = array();
         foreach($employees as $employee) {
 
-            $employeeParticular = $employee->employeeParticulars;
+            $employeeParticular = $employee->employeeParticular;
+            $profession      = Profession::find($employeeParticular->profession_id);
+            $professionReg   = ProfessionRegistration::find($employeeParticular->prof_reg_status_id);
+            $region          = Region::find($employeeParticular->region_id);
              array_push(
                 $data,
-                array(
-                     $employee->first_name.' '.$employee->last_name,
-                     $employee->phone,
-                     $employeeParticular->education,
-                     $employeeParticular->profession,
-                     $employeeParticular->employment_type,
-                     $employeeParticular->registration_status,
-                     $employeeParticular->region,
-                     Helper::getRetirementDate($employee->dob)
-                )
+                $this->getEmployeeParticular($employeeParticular,$employee)
             );
         }
 
@@ -95,7 +90,7 @@ class EmployeeReportController extends Controller{
           case 'registration_status' :
              if($reg_status){
 
-                 $particulars = $this->loadDataByFilter('registration_status', $professionReg->profession_reg_name);
+                 $particulars = $this->loadDataByFilter('prof_reg_status_id', $reg_status);
                  $data = $this->processResult($particulars);
 
                  if($wStation && $emp_type ){
@@ -138,7 +133,7 @@ class EmployeeReportController extends Controller{
 
             if($wStation){
 
-                 $particulars     = $this->loadDataByFilter('region', $region->region);
+                 $particulars     = $this->loadDataByFilter('region_id', $wStation);
                  $data            = $this->processResult($particulars);
 
                  if($emp_type  && $reg_status ){
@@ -229,12 +224,9 @@ class EmployeeReportController extends Controller{
  public function loadDataByFilter($column, $value){
 
         if($value == 'all'){
-          return DB::table('employee_particulars')
-                                       ->where($column, '!=', $value)
-                                       ->get();
+          return EmployeeParticular::all();
         }
-         return DB::table('employee_particulars')
-                                       ->where($column, '=', $value)
+         return EmployeeParticular::where($column, '=', $value)
                                        ->get();
     }
  public function processResult($particulars){
@@ -245,16 +237,7 @@ class EmployeeReportController extends Controller{
 
             array_push(
                 $data,
-                array(
-                     $employee->first_name.' '.$employee->last_name,
-                     $employee->phone,
-                     $employeeParticular->education,
-                     $employeeParticular->profession,
-                     $employeeParticular->employment_type,
-                     $employeeParticular->registration_status,
-                     $employeeParticular->region,
-                     Helper::getRetirementDate($employee->dob)
-                )
+                $this->getEmployeeParticular($employeeParticular,$employee)
             );
 
 
@@ -307,6 +290,25 @@ public function re_process($employeeParticulars,$param1, $param2){
     }
 
   return $data;
+}
+
+public function getEmployeeParticular(EmployeeParticular $employeeParticular, Employee $employee){
+
+  $profession      = Profession::find($employeeParticular->profession_id);
+  $professionReg   = ProfessionRegistration::find($employeeParticular->prof_reg_status_id);
+  $region          = Region::find($employeeParticular->region_id);
+
+  return array(
+
+     $employee->first_name.' '.$employee->last_name,
+     $employee->phone,
+     $employeeParticular->education,
+     $profession->profession_name,
+     $employeeParticular->employment_type,
+     $professionReg->profession_reg_name,
+     $region->region,
+     Helper::getRetirementDate($employee->dob)
+  );
 }
 
 }
