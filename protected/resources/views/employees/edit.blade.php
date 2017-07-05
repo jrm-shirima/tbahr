@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="panel-body">
-          <form id="formEmployee" action="{{url('employees')}}" method="POST">
+          <form id="formEmployeeEdit" action="{{url('employees/edit')}}/{{$employee->id}}" method="POST">
               {{ csrf_field() }}
                 <div class="row">
                        <div class="col-lg-6">
@@ -44,11 +44,6 @@
                                    <label class="radio-inline"><input type="radio" name="gender" @if($employee->gender == 'male') {{'checked'}} @endif; value="male">Male</label>
                                    <label class="radio-inline"><input type="radio" name="gender" @if($employee->gender == 'female') {{'checked'}} @endif; value="female" >Female</label>
                            </fieldset>
-                           <div class="form-group">
-                               <label for="email">Email address</label>
-                               <input type="email" name="email" class="form-control" id="email" value="{{$employee->email}}" aria-describedby="emailHelp" placeholder="Enter email">
-                               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                           </div>
                            <div class="form-group">
                                <label for="phone">Phone</label>
                                <input  type="text" class="form-control" value="{{$employee->phone}}" id="phone" name="phone" placeholder="Enter phone number">
@@ -80,7 +75,7 @@
                            <label for="registration_status">Registration Status</label>
                            <select class="form-control" name="registration_status" id="registration_status">
                                  @foreach($professionRegs as $profReg)
-                                   <option @if($employeeParticular->registration_status == $profReg->profession_reg_name) {{'selected'}} @endif; value="{{$profReg->profession_reg_name}}">{{$profReg->profession_reg_name}}</option>
+                                   <option @if($employeeParticular->registration_status == $profReg->profession_reg_name) {{'selected'}} @endif; value="{{$profReg->id}}">{{$profReg->profession_reg_name}}</option>
                                 @endforeach
                                </select>
                          </div>
@@ -92,7 +87,7 @@
                                <label for="certifications">Region</label>
                                <select class="form-control" name="region" id="region">
                                  @foreach($regions as $region)
-                                   <option @if($employeeParticular->region == $region->region) {{'selected'}} @endif; value="{{$region->region}}">{{$region->region}}</option>
+                                   <option @if($employeeParticular->region == $region->region) {{'selected'}} @endif; value="{{$region->id}}">{{$region->region}}</option>
                                 @endforeach
                                </select>
                          </div>
@@ -100,7 +95,7 @@
                                <label for="profession">Profession</label>
                                <select class="form-control" name="profession" id="profession">
                                  @foreach($professions as $profession)
-                                   <option @if($employeeParticular->profession == $profession->profession_name) {{'selected'}} @endif; value="{{$profession->profession_name}}">{{$profession->profession_name}}</option>
+                                   <option @if($employeeParticular->profession == $profession->profession_name) {{'selected'}} @endif; value="{{$profession->id}}">{{$profession->profession_name}}</option>
                                 @endforeach
                                </select>
                          </div>
@@ -142,7 +137,7 @@
       dob_input.datepicker(options);
       employmentDate_input.datepicker(options);
 
-      var formObject = $("#formEmployee");
+      var formObject = $("#formEmployeeEdit");
       formObject.on('submit',function(){
              $('.load-spinner').css('display','block');
               var postData = formObject.serializeArray();
@@ -168,9 +163,9 @@
                         $('.load-spinner').css('display','none');
                          console.log(data);
                          var rsMsg = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
-                            rsMsg  +='<strong>Success!</strong> You\'ve successifully, added new employee, You can <a href="{{url("employees")}}" class="alert-link">view here</a>.</div>';
+                            rsMsg  +='<strong>Success!</strong> You\'ve successifully, added new employee, You can <a href="{{url('employees')}}/{{$employee->id}}" class="alert-link">view here</a>.</div>';
                          $("#output").html(rsMsg);
-                         $("#formEmployee").closest('form').find("input[type=text], textarea").val("");
+                         $("#formEmployeeEdit").closest('form').find("input[type=text], input[type=email], textarea, select").val("");
                         }
 
 

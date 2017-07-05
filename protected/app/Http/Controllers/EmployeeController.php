@@ -64,16 +64,16 @@ class EmployeeController extends Controller
 
         try {
             $validator = Validator::make($request->all(), [
-                'first_name' => 'required',
-                'last_name' => 'required',
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
                 'gender' => 'required',
                 'marital_status' => 'required',
-                'email' => 'required',
+                'email'      => 'required|string|email|max:255|unique:employees',
                 'marital_status' => 'required',
-                'dob' => 'required',
-                'employment_date' => 'required',
+                'dob' => 'required|date',
+                'employment_date' => 'required|date',
                 'phone' => 'required',
-                'employment_type' => 'required',
+                'employment_type' => 'required|string|max:255',
                 'education' => 'required|before:tomorrow',
                 'registration_status' => 'required',
                 'profession' => 'required'
@@ -100,10 +100,6 @@ class EmployeeController extends Controller
                 $employeeParticular->region_id     =  $request->region;
                 $employeeParticular->save();
 
-
-
-
-
                 return Response::json(array(
                     'success' => true,
                     'data' => []
@@ -126,6 +122,13 @@ class EmployeeController extends Controller
             ), 402); // 400 being the HTTP code for an invalid request.
         }
     }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
+
     public function  getJSonEmployeesData(){
         //
         $employees = Employee::orderBy('first_name','ASC')->get();
@@ -161,16 +164,35 @@ class EmployeeController extends Controller
 
         return view('employees.show',compact('employee','employeeParticular','region','profession','professionRegistration'));
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
     public function showEmployeesByRegion($id){
       $region = Region::find($id);
 
      return view('employees.region', compact('region'));
     }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
     public function showEmployeesByProfession($id){
          $profession = Profession::find($id);
 
         return view('employees.profession', compact('profession'));
     }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
     public function getJSONEmployeesByRegion($id){
       $region = Region::find($id);
       $employeeParticulars = EmployeeParticular::where('region_id', '=', $region->id)->get();
@@ -189,6 +211,12 @@ class EmployeeController extends Controller
       $records["recordsFiltered"] = $iTotalRecords;
       echo json_encode($records);
     }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
     public function getJSONEmployeesByProfession($id){
         $profession = Profession::find($id);
         $employeeParticulars = EmployeeParticular::where('profession_id', '=', $profession->id)->get();
@@ -208,11 +236,24 @@ class EmployeeController extends Controller
         $records["recordsFiltered"] = $iTotalRecords;
         echo json_encode($records);
     }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
     public function showEmployeesByProfessionRegStatus($id){
          $professionReg = ProfessionRegistration::find($id);
 
         return view('employees.profession_registration_status', compact('professionReg'));
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
 
     public function getJSONEmployeesByProfessionRegStatus($id){
         $professionReg = ProfessionRegistration::find($id);
@@ -236,19 +277,78 @@ class EmployeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Employee  $employee
-     * @return \Illuminate\Http\Response
+     * @param  Employee  $id
+     * @return View with Response
      */
     public function edit($id){
         $employee = Employee::find($id);
-        $employeeParticular = $employee->employeeParticulars;
+        $employeeParticular = $employee->employeeParticular;
         $professions      = Profession::all();
         $professionRegs   = ProfessionRegistration::all();
         $regions          = Region::all();
       return view('employees.edit', compact('employee','employeeParticular','regions','professions','professionRegs'));
     }
 
+    public function postUpdateEmployee(Request $request, $id){
 
+      try {
+          $validator = Validator::make($request->all(), [
+              'first_name' => 'required|string|max:255',
+              'last_name' => 'required|string|max:255',
+              'gender' => 'required',
+              'marital_status' => 'required',
+              'marital_status' => 'required',
+              'dob' => 'required|date',
+              'employment_date' => 'required|date',
+              'phone' => 'required',
+              'employment_type' => 'required|string|max:255',
+              'education' => 'required|before:tomorrow',
+              'registration_status' => 'required',
+              'profession' => 'required'
+          ]);
+          if (!$validator->fails()){
+              $employee             =  Employee::find($id);
+              $employee->first_name =  $request->first_name;
+              $employee->last_name  =  $request->last_name;
+              $employee->gender     =  $request->gender;
+              $employee->marital_status  =  $request->marital_status;
+              $employee->dob             =  $request->dob;
+              $employee->phone           =  $request->phone;
+              $employee->save();
+
+
+              $employeeParticular  =  EmployeeParticular::find($employee->employeeParticular->id);
+              $employeeParticular->employee_id = $employee->id  ;
+              $employeeParticular->employment_type =  $request->employment_type;
+              $employeeParticular->employment_date =  $request->employment_date;
+              $employeeParticular->education       =  $request->education;
+              $employeeParticular->prof_reg_status_id =  $request->registration_status;
+              $employeeParticular->profession_id =  $request->profession;
+              $employeeParticular->region_id     =  $request->region;
+              $employeeParticular->save();
+
+              return Response::json(array(
+                  'success' => true,
+                  'data' => []
+              ), 200);
+
+
+          } else {
+
+              return Response::json(array(
+                  'success' => false,
+                  'errors' => $validator->getMessageBag()->toArray()
+              ), 400);                // 400 being the HTTP code for an invalid request.
+
+          }
+      }catch (\Exception $ex){
+
+          return Response::json(array(
+              'success' => false,
+              'errors' => $ex->getMessage()
+          ), 402); // 400 being the HTTP code for an invalid request.
+      }
+    }
 
     /**
      * Update the specified resource in storage.
@@ -268,11 +368,17 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Employee $employee)
-    {
-        //
+    public function deleteEmployee($id){
+        $employee = Employee::find($id);
+        $employee->delete();
+      return redirect('employees/');
     }
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
     public function getListOfEmployees(Employee $employee){
 
       $employeeParticular = $employee->employeeParticular;

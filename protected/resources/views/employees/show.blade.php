@@ -24,7 +24,14 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2> {{$employee->first_name}} {{$employee->last_name}}'s {{"Details"}}</h2>
-                        </div>
+                             <div class="clearfix">
+                               <div class="pull-right">
+                                 <a href="{{url('employees/')}}/{{$employee->id}}/edit" class="btn btn-icon-only push-right"><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                 <a href="#" class="btn btn-icon-only push-right" data-target="#deleteEmployee" data-toggle="modal"><i title="Delete" class="fa fa-trash text-danger" aria-hidden="true"></i></i></a>
+
+                               </div>
+                             </div>
+                          </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table width="100%">
@@ -124,6 +131,31 @@
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                  <!-- Modal -->
+                    <div id="deleteEmployee" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                       <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <h4 class="modal-title">Hey, {{Auth::user()->first_name}} {{Auth::user()->last_name}}</h4>
+                       </div>
+                       <div class="modal-body">
+                         <p class="text-info">Do you really want to delete {{$employee->first_name}} {{$employee->last_name}}?</p>
+                       </div>
+                       <div class="modal-footer">
+                         <a href="#" class="btn btn-success" data-dismiss="modal">No, Thank you!</a>
+                         <a href="{{url('employees/delete')}}/{{$employee->id}}" class="btn btn-danger">Delete</a>
+                       </div>
+                     </div>
+                    </div>
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

@@ -40,6 +40,8 @@ Route::get('/dashboard','HomeController@index');
 Route::resource('employees', 'EmployeeController',['only' => [
     'index', 'show','create','store','edit'
 ]]);
+Route::post('employees/edit/{id}','EmployeeController@postUpdateEmployee'); //employees/delete
+Route::get('employees/delete/{id}','EmployeeController@deleteEmployee');
 Route::get('get-employees','EmployeeController@getJSonEmployeesData');
 Route::get('employees/profession/{id}','EmployeeController@showEmployeesByProfession');
 Route::get('employees/registration-status/{id}','EmployeeController@showEmployeesByProfessionRegStatus');

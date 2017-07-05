@@ -35,7 +35,7 @@ class HomeController extends Controller
               // ExampleController.php
          $empCatPercentages = $this->getEmployeCategoriesPercentages();
          $professionDistribution = $this->getEmployeesProfessionDistributionNum();
-        Log::info($professionDistribution );
+        //Log::info($professionDistribution );
          //Create Pie Chart
          $employees = app()->chartjs
                  ->name('all_employees')
@@ -254,10 +254,11 @@ class HomeController extends Controller
         foreach($employees as $e => $employee) {
 
                 $employeeParticular = $employee->employeeParticular;
+                //Log::info("Profession Particular");
+                //Log::info($employeeParticular);
                 //$profession_id  = $employeeParticular->profession_id;
                 $profession  = Profession::find($employeeParticular->profession_id);
-                Log::info("Profession Particular");
-                Log::info($profession);
+
                 $distrubNum['data'][] = $profession->profession_name;
                 $distrubNum['compare'][] =strripos(trim($profession->profession_name),$profDistribution[3],0);
 
