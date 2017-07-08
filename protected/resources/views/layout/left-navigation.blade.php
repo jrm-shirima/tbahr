@@ -14,7 +14,7 @@
     </style>
      <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
+            <div class="navbar nav_title navbar-fixed-top" style="border: 0;">
               <a href="{{url('dashboard')}}" class="site_title">
                   <div class="logo_pic clearfix">
                     <img src="{{asset("protected/storage/uploads/images/logo.png")}}" alt="..." class="img-circle logo_img">
@@ -25,7 +25,7 @@
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix">
+            <div class="profile left-profile clearfix">
               <div class="profile_pic">
                 <img src="{{asset("protected/storage/uploads/images/img.jpg")}}" alt="..." class="img-circle profile_img">
               </div>

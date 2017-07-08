@@ -71,6 +71,16 @@
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <div class="panel panel-default">
+                                          <div class="panel-body user-action">
+
+
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="employeesReportDataTable">
 
                                 </table>
@@ -144,7 +154,7 @@
 
   function processReceivedData(dataSet){
        console.log(dataSet);
-  $('#employeesReportDataTable').DataTable( {
+  var table = $('#employeesReportDataTable').DataTable( {
           "destroy": true,
           data: dataSet,
           columns: [
@@ -157,10 +167,46 @@
               { title: "Region" },
               { title: "Ret. Date" }
 
-          ]
-      } );
+          ],
+          buttons: false
+      });
+  new $.fn.dataTable.Buttons( table, {
+            buttons: [
+                {
+                   text: 'Print',
+                   extend: 'print',
+                   message: 'TBA HR System Generated Report',
+                   title: 'List of Employees'
+                },
+                {
+                    text: 'PDF',
+                    extend:'pdfHtml5',
+                    message: 'TBA HR System Generated Report',
+                    title: 'List of Employees'
+                },
+                {
+                    text: 'Copy',
+                    extend:'copyHtml5',
+                    title: 'List of Employees'
+                },
+                {
+                    text: 'Excel',
+                    extend:'excelHtml5',
+                    title: 'List of Employees'
+                },
+                {
+                    text: 'CSV',
+                    extend:'csvHtml5',
+                    title: 'List of Employees'
+                }
+            ]
+        } );
 
-       }
+   table.buttons()
+        .container()
+        .appendTo( '.user-action' );
+
+    }
 
     });
 

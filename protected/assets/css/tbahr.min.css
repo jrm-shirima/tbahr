@@ -75,3 +75,11 @@ section.inner-wraper{
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
+.profile.left-profile{
+  margin-top: 55px;
+  position: relative;
+}
+.tile_count {
+    margin-bottom: 20px;
+    margin-top: 70px;
+}

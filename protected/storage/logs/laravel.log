@@ -1,254 +1,4 @@
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Catherine Kiambiki',
-  1 => 'Mwanza',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="28">
-              <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Eromini Shirima',
-  1 => 'Shinyanga',
-  2 => 'Environmental Engineer',
-  3 => 'Bachelor',
-  4 => 'Consulting Engineer',
-  5 => '<span id="6">
-              <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Evelne Lekule',
-  1 => 'Mbeya',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="20">
-              <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Fred Mangula',
-  1 => 'HQ',
-  2 => 'Estate Officer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="23">
-              <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Gerad Kibona',
-  1 => 'Simiyu',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="21">
-              <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'John Aron',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="4">
-              <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Joseph Lema',
-  1 => 'Kigoma',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="30">
-              <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Joshua Alphonce',
-  1 => 'Mbeya',
-  2 => 'Accountant',
-  3 => 'Bachelor',
-  4 => 'N/A',
-  5 => '<span id="10">
-              <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Kimaro Denice',
-  1 => 'Tabora',
-  2 => 'Town Planner',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="26">
-              <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Ksimu Juma',
-  1 => 'Njombe',
-  2 => 'Valuer',
-  3 => 'Masters',
-  4 => 'Profession Engineer',
-  5 => '<span id="14">
-              <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Kulwa Hamisi',
-  1 => 'Tabora',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="13">
-              <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Majaliwa John',
-  1 => 'Arusha',
-  2 => 'Accountant',
-  3 => 'Degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="7">
-              <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Mariam Liana',
-  1 => 'Morogoro',
-  2 => 'Accountant',
-  3 => 'Masters',
-  4 => 'Consulting Engineer',
-  5 => '<span id="22">
-              <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="2">
-              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Mwanza',
-  2 => 'Architect',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="3">
-              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Shinyanga',
-  2 => 'ICT Engineer',
-  3 => 'BAchelor',
-  4 => 'N/A',
-  5 => '<span id="5">
-              <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Tabora',
-  2 => 'Mechanical Engineer',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="8">
-              <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="15">
-              <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Simiyu',
-  2 => 'Estate Officer',
-  3 => 'PHD',
-  4 => 'Consulting Engineer',
-  5 => '<span id="16">
-              <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:18] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Iringa',
-  2 => 'Estate Officer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="18">
-              <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:19] local.INFO: array (
-  0 => 'Rachel Sanga',
-  1 => 'Iringa',
-  2 => 'Architect',
-  3 => 'Masters',
-  4 => 'Graduate Engineer',
-  5 => '<span id="19">
-              <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:19] local.INFO: array (
-  0 => 'Rachel Kyando',
-  1 => 'Arusha',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="27">
-              <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:19] local.INFO: array (
-  0 => 'Rodric uvabga',
-  1 => 'Arusha',
-  2 => 'Valuer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="17">
-              <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:19] local.INFO: array (
-  0 => 'Stephano Gastory',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="25">
-              <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:15:19] local.INFO: array (
-  0 => 'Tumaini Mwampute',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="24">
-              <a href="http://localhost/tbahr/employees/24" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Catherine Kiambiki',
   1 => 'Mwanza',
   2 => 'ICT Engineer',
@@ -260,7 +10,7 @@
                     <a href="http://localhost/tbahr/employees/28/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Eromini Shirima',
   1 => 'Shinyanga',
   2 => 'Environmental Engineer',
@@ -272,7 +22,7 @@
                     <a href="http://localhost/tbahr/employees/6/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Evelne Lekule',
   1 => 'Mbeya',
   2 => 'Quantity Surveyor',
@@ -284,7 +34,7 @@
                     <a href="http://localhost/tbahr/employees/20/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Fred Mangula',
   1 => 'HQ',
   2 => 'Estate Officer',
@@ -296,7 +46,7 @@
                     <a href="http://localhost/tbahr/employees/23/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Gerad Kibona',
   1 => 'Simiyu',
   2 => 'Architect',
@@ -308,7 +58,7 @@
                     <a href="http://localhost/tbahr/employees/21/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'John Aron',
   1 => 'Songwe',
   2 => 'ICT Engineer',
@@ -320,7 +70,7 @@
                     <a href="http://localhost/tbahr/employees/4/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:55] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Joseph Lema',
   1 => 'Kigoma',
   2 => 'Quantity Surveyor',
@@ -332,7 +82,7 @@
                     <a href="http://localhost/tbahr/employees/30/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Joshua Alphonce',
   1 => 'Mbeya',
   2 => 'Accountant',
@@ -344,7 +94,7 @@
                     <a href="http://localhost/tbahr/employees/10/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Kimaro Denice',
   1 => 'Tabora',
   2 => 'Town Planner',
@@ -356,7 +106,7 @@
                     <a href="http://localhost/tbahr/employees/26/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Ksimu Juma',
   1 => 'Njombe',
   2 => 'Valuer',
@@ -368,7 +118,7 @@
                     <a href="http://localhost/tbahr/employees/14/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Kulwa Hamisi',
   1 => 'Tabora',
   2 => 'Human Resources',
@@ -380,7 +130,7 @@
                     <a href="http://localhost/tbahr/employees/13/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Majaliwa John',
   1 => 'Arusha',
   2 => 'Accountant',
@@ -392,7 +142,7 @@
                     <a href="http://localhost/tbahr/employees/7/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Mariam Liana',
   1 => 'Morogoro',
   2 => 'Accountant',
@@ -404,7 +154,7 @@
                     <a href="http://localhost/tbahr/employees/22/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Songwe',
   2 => 'ICT Engineer',
@@ -416,7 +166,7 @@
                     <a href="http://localhost/tbahr/employees/2/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Mwanza',
   2 => 'Architect',
@@ -428,7 +178,7 @@
                     <a href="http://localhost/tbahr/employees/3/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Shinyanga',
   2 => 'ICT Engineer',
@@ -440,7 +190,7 @@
                     <a href="http://localhost/tbahr/employees/5/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Tabora',
   2 => 'Mechanical Engineer',
@@ -452,7 +202,7 @@
                     <a href="http://localhost/tbahr/employees/8/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Songwe',
   2 => 'Human Resources',
@@ -464,7 +214,7 @@
                     <a href="http://localhost/tbahr/employees/15/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Simiyu',
   2 => 'Estate Officer',
@@ -476,7 +226,7 @@
                     <a href="http://localhost/tbahr/employees/16/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Iringa',
   2 => 'Estate Officer',
@@ -488,7 +238,7 @@
                     <a href="http://localhost/tbahr/employees/18/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Rachel Sanga',
   1 => 'Iringa',
   2 => 'Architect',
@@ -500,7 +250,7 @@
                     <a href="http://localhost/tbahr/employees/19/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Rachel Kyando',
   1 => 'Arusha',
   2 => 'ICT Engineer',
@@ -512,7 +262,7 @@
                     <a href="http://localhost/tbahr/employees/27/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Rodric uvabga',
   1 => 'Arusha',
   2 => 'Valuer',
@@ -524,7 +274,7 @@
                     <a href="http://localhost/tbahr/employees/17/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Stephano Gastory',
   1 => 'HQ',
   2 => 'Architect',
@@ -536,7 +286,7 @@
                     <a href="http://localhost/tbahr/employees/25/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:24:56] local.INFO: array (
+[2017-07-08 20:24:09] local.INFO: array (
   0 => 'Tumaini Mwampute',
   1 => 'HQ',
   2 => 'Architect',
@@ -548,507 +298,7 @@
                     <a href="http://localhost/tbahr/employees/24/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:30:26] local.INFO: array (
-  0 => 'Catherine Kiambiki',
-  1 => 'Mwanza',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="28">
-              <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Eromini Shirima',
-  1 => 'Shinyanga',
-  2 => 'Environmental Engineer',
-  3 => 'Bachelor',
-  4 => 'Consulting Engineer',
-  5 => '<span id="6">
-              <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Evelne Lekule',
-  1 => 'Mbeya',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="20">
-              <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Fred Mangula',
-  1 => 'HQ',
-  2 => 'Estate Officer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="23">
-              <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Gerad Kibona',
-  1 => 'Simiyu',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="21">
-              <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'John Aron',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="4">
-              <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Joseph Lema',
-  1 => 'Kigoma',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="30">
-              <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Joshua Alphonce',
-  1 => 'Mbeya',
-  2 => 'Accountant',
-  3 => 'Bachelor',
-  4 => 'N/A',
-  5 => '<span id="10">
-              <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Kimaro Denice',
-  1 => 'Tabora',
-  2 => 'Town Planner',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="26">
-              <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Ksimu Juma',
-  1 => 'Njombe',
-  2 => 'Valuer',
-  3 => 'Masters',
-  4 => 'Profession Engineer',
-  5 => '<span id="14">
-              <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Kulwa Hamisi',
-  1 => 'Tabora',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="13">
-              <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Majaliwa John',
-  1 => 'Arusha',
-  2 => 'Accountant',
-  3 => 'Degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="7">
-              <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Mariam Liana',
-  1 => 'Morogoro',
-  2 => 'Accountant',
-  3 => 'Masters',
-  4 => 'Consulting Engineer',
-  5 => '<span id="22">
-              <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="2">
-              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Mwanza',
-  2 => 'Architect',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="3">
-              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Shinyanga',
-  2 => 'ICT Engineer',
-  3 => 'BAchelor',
-  4 => 'N/A',
-  5 => '<span id="5">
-              <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Tabora',
-  2 => 'Mechanical Engineer',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="8">
-              <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="15">
-              <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Simiyu',
-  2 => 'Estate Officer',
-  3 => 'PHD',
-  4 => 'Consulting Engineer',
-  5 => '<span id="16">
-              <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Iringa',
-  2 => 'Estate Officer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="18">
-              <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Rachel Sanga',
-  1 => 'Iringa',
-  2 => 'Architect',
-  3 => 'Masters',
-  4 => 'Graduate Engineer',
-  5 => '<span id="19">
-              <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Rachel Kyando',
-  1 => 'Arusha',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="27">
-              <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Rodric uvabga',
-  1 => 'Arusha',
-  2 => 'Valuer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="17">
-              <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Stephano Gastory',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="25">
-              <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:30:27] local.INFO: array (
-  0 => 'Tumaini Mwampute',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="24">
-              <a href="http://localhost/tbahr/employees/24" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Catherine Kiambiki',
-  1 => 'Mwanza',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="28">
-              <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Eromini Shirima',
-  1 => 'Shinyanga',
-  2 => 'Environmental Engineer',
-  3 => 'Bachelor',
-  4 => 'Consulting Engineer',
-  5 => '<span id="6">
-              <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Evelne Lekule',
-  1 => 'Mbeya',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="20">
-              <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Fred Mangula',
-  1 => 'HQ',
-  2 => 'Estate Officer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="23">
-              <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Gerad Kibona',
-  1 => 'Simiyu',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="21">
-              <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'John Aron',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="4">
-              <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Joseph Lema',
-  1 => 'Kigoma',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="30">
-              <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Joshua Alphonce',
-  1 => 'Mbeya',
-  2 => 'Accountant',
-  3 => 'Bachelor',
-  4 => 'N/A',
-  5 => '<span id="10">
-              <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Kimaro Denice',
-  1 => 'Tabora',
-  2 => 'Town Planner',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="26">
-              <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:47] local.INFO: array (
-  0 => 'Ksimu Juma',
-  1 => 'Njombe',
-  2 => 'Valuer',
-  3 => 'Masters',
-  4 => 'Profession Engineer',
-  5 => '<span id="14">
-              <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Kulwa Hamisi',
-  1 => 'Tabora',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="13">
-              <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Majaliwa John',
-  1 => 'Arusha',
-  2 => 'Accountant',
-  3 => 'Degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="7">
-              <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Mariam Liana',
-  1 => 'Morogoro',
-  2 => 'Accountant',
-  3 => 'Masters',
-  4 => 'Consulting Engineer',
-  5 => '<span id="22">
-              <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="2">
-              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Mwanza',
-  2 => 'Architect',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="3">
-              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Shinyanga',
-  2 => 'ICT Engineer',
-  3 => 'BAchelor',
-  4 => 'N/A',
-  5 => '<span id="5">
-              <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Tabora',
-  2 => 'Mechanical Engineer',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="8">
-              <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="15">
-              <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Simiyu',
-  2 => 'Estate Officer',
-  3 => 'PHD',
-  4 => 'Consulting Engineer',
-  5 => '<span id="16">
-              <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Iringa',
-  2 => 'Estate Officer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="18">
-              <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Rachel Sanga',
-  1 => 'Iringa',
-  2 => 'Architect',
-  3 => 'Masters',
-  4 => 'Graduate Engineer',
-  5 => '<span id="19">
-              <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Rachel Kyando',
-  1 => 'Arusha',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="27">
-              <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Rodric uvabga',
-  1 => 'Arusha',
-  2 => 'Valuer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="17">
-              <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Stephano Gastory',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="25">
-              <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:34:48] local.INFO: array (
-  0 => 'Tumaini Mwampute',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="24">
-              <a href="http://localhost/tbahr/employees/24" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 05:42:52] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Catherine Kiambiki',
   1 => 'Mwanza',
   2 => 'ICT Engineer',
@@ -1060,7 +310,7 @@
                     <a href="http://localhost/tbahr/employees/28/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:52] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Eromini Shirima',
   1 => 'Shinyanga',
   2 => 'Environmental Engineer',
@@ -1072,7 +322,7 @@
                     <a href="http://localhost/tbahr/employees/6/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:52] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Evelne Lekule',
   1 => 'Mbeya',
   2 => 'Quantity Surveyor',
@@ -1084,7 +334,7 @@
                     <a href="http://localhost/tbahr/employees/20/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:52] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Fred Mangula',
   1 => 'HQ',
   2 => 'Estate Officer',
@@ -1096,7 +346,7 @@
                     <a href="http://localhost/tbahr/employees/23/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Gerad Kibona',
   1 => 'Simiyu',
   2 => 'Architect',
@@ -1108,7 +358,7 @@
                     <a href="http://localhost/tbahr/employees/21/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'John Aron',
   1 => 'Songwe',
   2 => 'ICT Engineer',
@@ -1120,7 +370,7 @@
                     <a href="http://localhost/tbahr/employees/4/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Joseph Lema',
   1 => 'Kigoma',
   2 => 'Quantity Surveyor',
@@ -1132,7 +382,7 @@
                     <a href="http://localhost/tbahr/employees/30/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Joshua Alphonce',
   1 => 'Mbeya',
   2 => 'Accountant',
@@ -1144,7 +394,7 @@
                     <a href="http://localhost/tbahr/employees/10/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Kimaro Denice',
   1 => 'Tabora',
   2 => 'Town Planner',
@@ -1156,7 +406,7 @@
                     <a href="http://localhost/tbahr/employees/26/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Ksimu Juma',
   1 => 'Njombe',
   2 => 'Valuer',
@@ -1168,7 +418,7 @@
                     <a href="http://localhost/tbahr/employees/14/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Kulwa Hamisi',
   1 => 'Tabora',
   2 => 'Human Resources',
@@ -1180,7 +430,7 @@
                     <a href="http://localhost/tbahr/employees/13/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Majaliwa John',
   1 => 'Arusha',
   2 => 'Accountant',
@@ -1192,7 +442,7 @@
                     <a href="http://localhost/tbahr/employees/7/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Mariam Liana',
   1 => 'Morogoro',
   2 => 'Accountant',
@@ -1204,7 +454,7 @@
                     <a href="http://localhost/tbahr/employees/22/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Songwe',
   2 => 'ICT Engineer',
@@ -1216,7 +466,7 @@
                     <a href="http://localhost/tbahr/employees/2/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Mwanza',
   2 => 'Architect',
@@ -1228,7 +478,7 @@
                     <a href="http://localhost/tbahr/employees/3/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Shinyanga',
   2 => 'ICT Engineer',
@@ -1240,7 +490,7 @@
                     <a href="http://localhost/tbahr/employees/5/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Tabora',
   2 => 'Mechanical Engineer',
@@ -1252,7 +502,7 @@
                     <a href="http://localhost/tbahr/employees/8/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Songwe',
   2 => 'Human Resources',
@@ -1264,7 +514,7 @@
                     <a href="http://localhost/tbahr/employees/15/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Simiyu',
   2 => 'Estate Officer',
@@ -1276,7 +526,7 @@
                     <a href="http://localhost/tbahr/employees/16/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:54] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Iringa',
   2 => 'Estate Officer',
@@ -1288,7 +538,7 @@
                     <a href="http://localhost/tbahr/employees/18/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:55] local.INFO: array (
   0 => 'Rachel Sanga',
   1 => 'Iringa',
   2 => 'Architect',
@@ -1300,7 +550,7 @@
                     <a href="http://localhost/tbahr/employees/19/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:55] local.INFO: array (
   0 => 'Rachel Kyando',
   1 => 'Arusha',
   2 => 'ICT Engineer',
@@ -1312,7 +562,7 @@
                     <a href="http://localhost/tbahr/employees/27/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:55] local.INFO: array (
   0 => 'Rodric uvabga',
   1 => 'Arusha',
   2 => 'Valuer',
@@ -1324,7 +574,7 @@
                     <a href="http://localhost/tbahr/employees/17/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:55] local.INFO: array (
   0 => 'Stephano Gastory',
   1 => 'HQ',
   2 => 'Architect',
@@ -1336,7 +586,7 @@
                     <a href="http://localhost/tbahr/employees/25/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:42:53] local.INFO: array (
+[2017-07-08 20:26:55] local.INFO: array (
   0 => 'Tumaini Mwampute',
   1 => 'HQ',
   2 => 'Architect',
@@ -1348,7 +598,7 @@
                     <a href="http://localhost/tbahr/employees/24/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
                    </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Catherine Kiambiki',
   1 => 'Mwanza',
   2 => 'ICT Engineer',
@@ -1358,7 +608,7 @@
               <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Eromini Shirima',
   1 => 'Shinyanga',
   2 => 'Environmental Engineer',
@@ -1368,7 +618,7 @@
               <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Evelne Lekule',
   1 => 'Mbeya',
   2 => 'Quantity Surveyor',
@@ -1378,7 +628,7 @@
               <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Fred Mangula',
   1 => 'HQ',
   2 => 'Estate Officer',
@@ -1388,7 +638,7 @@
               <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Gerad Kibona',
   1 => 'Simiyu',
   2 => 'Architect',
@@ -1398,7 +648,7 @@
               <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'John Aron',
   1 => 'Songwe',
   2 => 'ICT Engineer',
@@ -1408,7 +658,7 @@
               <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Joseph Lema',
   1 => 'Kigoma',
   2 => 'Quantity Surveyor',
@@ -1418,7 +668,7 @@
               <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Joshua Alphonce',
   1 => 'Mbeya',
   2 => 'Accountant',
@@ -1428,7 +678,7 @@
               <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Kimaro Denice',
   1 => 'Tabora',
   2 => 'Town Planner',
@@ -1438,7 +688,7 @@
               <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Ksimu Juma',
   1 => 'Njombe',
   2 => 'Valuer',
@@ -1448,7 +698,7 @@
               <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Kulwa Hamisi',
   1 => 'Tabora',
   2 => 'Human Resources',
@@ -1458,7 +708,7 @@
               <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:16] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Majaliwa John',
   1 => 'Arusha',
   2 => 'Accountant',
@@ -1468,7 +718,7 @@
               <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Mariam Liana',
   1 => 'Morogoro',
   2 => 'Accountant',
@@ -1478,7 +728,7 @@
               <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Songwe',
   2 => 'ICT Engineer',
@@ -1488,7 +738,7 @@
               <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Mwanza',
   2 => 'Architect',
@@ -1498,7 +748,7 @@
               <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:20] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Shinyanga',
   2 => 'ICT Engineer',
@@ -1508,7 +758,7 @@
               <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Tabora',
   2 => 'Mechanical Engineer',
@@ -1518,7 +768,7 @@
               <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Songwe',
   2 => 'Human Resources',
@@ -1528,7 +778,7 @@
               <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Simiyu',
   2 => 'Estate Officer',
@@ -1538,7 +788,7 @@
               <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Otoman Nkomanya',
   1 => 'Iringa',
   2 => 'Estate Officer',
@@ -1548,7 +798,7 @@
               <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Rachel Sanga',
   1 => 'Iringa',
   2 => 'Architect',
@@ -1558,7 +808,7 @@
               <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Rachel Kyando',
   1 => 'Arusha',
   2 => 'ICT Engineer',
@@ -1568,7 +818,7 @@
               <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Rodric uvabga',
   1 => 'Arusha',
   2 => 'Valuer',
@@ -1578,7 +828,7 @@
               <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Stephano Gastory',
   1 => 'HQ',
   2 => 'Architect',
@@ -1588,757 +838,7 @@
               <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
              </span>',
 )  
-[2017-07-08 05:47:17] local.INFO: array (
-  0 => 'Tumaini Mwampute',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="24">
-              <a href="http://localhost/tbahr/employees/24" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'Catherine Kiambiki',
-  1 => 'Mwanza',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="28">
-              <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'Eromini Shirima',
-  1 => 'Shinyanga',
-  2 => 'Environmental Engineer',
-  3 => 'Bachelor',
-  4 => 'Consulting Engineer',
-  5 => '<span id="6">
-              <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'Evelne Lekule',
-  1 => 'Mbeya',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="20">
-              <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'Fred Mangula',
-  1 => 'HQ',
-  2 => 'Estate Officer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="23">
-              <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'Gerad Kibona',
-  1 => 'Simiyu',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="21">
-              <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'John Aron',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="4">
-              <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:40] local.INFO: array (
-  0 => 'Joseph Lema',
-  1 => 'Kigoma',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="30">
-              <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Joshua Alphonce',
-  1 => 'Mbeya',
-  2 => 'Accountant',
-  3 => 'Bachelor',
-  4 => 'N/A',
-  5 => '<span id="10">
-              <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Kimaro Denice',
-  1 => 'Tabora',
-  2 => 'Town Planner',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="26">
-              <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Ksimu Juma',
-  1 => 'Njombe',
-  2 => 'Valuer',
-  3 => 'Masters',
-  4 => 'Profession Engineer',
-  5 => '<span id="14">
-              <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Kulwa Hamisi',
-  1 => 'Tabora',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="13">
-              <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Majaliwa John',
-  1 => 'Arusha',
-  2 => 'Accountant',
-  3 => 'Degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="7">
-              <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Mariam Liana',
-  1 => 'Morogoro',
-  2 => 'Accountant',
-  3 => 'Masters',
-  4 => 'Consulting Engineer',
-  5 => '<span id="22">
-              <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="2">
-              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Mwanza',
-  2 => 'Architect',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="3">
-              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Shinyanga',
-  2 => 'ICT Engineer',
-  3 => 'BAchelor',
-  4 => 'N/A',
-  5 => '<span id="5">
-              <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Tabora',
-  2 => 'Mechanical Engineer',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="8">
-              <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="15">
-              <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Simiyu',
-  2 => 'Estate Officer',
-  3 => 'PHD',
-  4 => 'Consulting Engineer',
-  5 => '<span id="16">
-              <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Iringa',
-  2 => 'Estate Officer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="18">
-              <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Rachel Sanga',
-  1 => 'Iringa',
-  2 => 'Architect',
-  3 => 'Masters',
-  4 => 'Graduate Engineer',
-  5 => '<span id="19">
-              <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Rachel Kyando',
-  1 => 'Arusha',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="27">
-              <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Rodric uvabga',
-  1 => 'Arusha',
-  2 => 'Valuer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="17">
-              <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Stephano Gastory',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="25">
-              <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:40:41] local.INFO: array (
-  0 => 'Tumaini Mwampute',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="24">
-              <a href="http://localhost/tbahr/employees/24" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Catherine Kiambiki',
-  1 => 'Mwanza',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="28">
-              <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Eromini Shirima',
-  1 => 'Shinyanga',
-  2 => 'Environmental Engineer',
-  3 => 'Bachelor',
-  4 => 'Consulting Engineer',
-  5 => '<span id="6">
-              <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Evelne Lekule',
-  1 => 'Mbeya',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="20">
-              <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Fred Mangula',
-  1 => 'HQ',
-  2 => 'Estate Officer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="23">
-              <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Gerad Kibona',
-  1 => 'Simiyu',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="21">
-              <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'John Aron',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="4">
-              <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Joseph Lema',
-  1 => 'Kigoma',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="30">
-              <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Joshua Alphonce',
-  1 => 'Mbeya',
-  2 => 'Accountant',
-  3 => 'Bachelor',
-  4 => 'N/A',
-  5 => '<span id="10">
-              <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Kimaro Denice',
-  1 => 'Tabora',
-  2 => 'Town Planner',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="26">
-              <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Ksimu Juma',
-  1 => 'Njombe',
-  2 => 'Valuer',
-  3 => 'Masters',
-  4 => 'Profession Engineer',
-  5 => '<span id="14">
-              <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Kulwa Hamisi',
-  1 => 'Tabora',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="13">
-              <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Majaliwa John',
-  1 => 'Arusha',
-  2 => 'Accountant',
-  3 => 'Degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="7">
-              <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Mariam Liana',
-  1 => 'Morogoro',
-  2 => 'Accountant',
-  3 => 'Masters',
-  4 => 'Consulting Engineer',
-  5 => '<span id="22">
-              <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="2">
-              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Mwanza',
-  2 => 'Architect',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="3">
-              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Shinyanga',
-  2 => 'ICT Engineer',
-  3 => 'BAchelor',
-  4 => 'N/A',
-  5 => '<span id="5">
-              <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Tabora',
-  2 => 'Mechanical Engineer',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="8">
-              <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:19] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="15">
-              <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Simiyu',
-  2 => 'Estate Officer',
-  3 => 'PHD',
-  4 => 'Consulting Engineer',
-  5 => '<span id="16">
-              <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Iringa',
-  2 => 'Estate Officer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="18">
-              <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Rachel Sanga',
-  1 => 'Iringa',
-  2 => 'Architect',
-  3 => 'Masters',
-  4 => 'Graduate Engineer',
-  5 => '<span id="19">
-              <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Rachel Kyando',
-  1 => 'Arusha',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="27">
-              <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Rodric uvabga',
-  1 => 'Arusha',
-  2 => 'Valuer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="17">
-              <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Stephano Gastory',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="25">
-              <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:45:20] local.INFO: array (
-  0 => 'Tumaini Mwampute',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="24">
-              <a href="http://localhost/tbahr/employees/24" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Catherine Kiambiki',
-  1 => 'Mwanza',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="28">
-              <a href="http://localhost/tbahr/employees/28" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Eromini Shirima',
-  1 => 'Shinyanga',
-  2 => 'Environmental Engineer',
-  3 => 'Bachelor',
-  4 => 'Consulting Engineer',
-  5 => '<span id="6">
-              <a href="http://localhost/tbahr/employees/6" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Evelne Lekule',
-  1 => 'Mbeya',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="20">
-              <a href="http://localhost/tbahr/employees/20" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Fred Mangula',
-  1 => 'HQ',
-  2 => 'Estate Officer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="23">
-              <a href="http://localhost/tbahr/employees/23" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Gerad Kibona',
-  1 => 'Simiyu',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="21">
-              <a href="http://localhost/tbahr/employees/21" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'John Aron',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="4">
-              <a href="http://localhost/tbahr/employees/4" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Joseph Lema',
-  1 => 'Kigoma',
-  2 => 'Quantity Surveyor',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="30">
-              <a href="http://localhost/tbahr/employees/30" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Joshua Alphonce',
-  1 => 'Mbeya',
-  2 => 'Accountant',
-  3 => 'Bachelor',
-  4 => 'N/A',
-  5 => '<span id="10">
-              <a href="http://localhost/tbahr/employees/10" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Kimaro Denice',
-  1 => 'Tabora',
-  2 => 'Town Planner',
-  3 => 'degree',
-  4 => 'Consulting Engineer',
-  5 => '<span id="26">
-              <a href="http://localhost/tbahr/employees/26" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Ksimu Juma',
-  1 => 'Njombe',
-  2 => 'Valuer',
-  3 => 'Masters',
-  4 => 'Profession Engineer',
-  5 => '<span id="14">
-              <a href="http://localhost/tbahr/employees/14" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Kulwa Hamisi',
-  1 => 'Tabora',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="13">
-              <a href="http://localhost/tbahr/employees/13" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Majaliwa John',
-  1 => 'Arusha',
-  2 => 'Accountant',
-  3 => 'Degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="7">
-              <a href="http://localhost/tbahr/employees/7" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Mariam Liana',
-  1 => 'Morogoro',
-  2 => 'Accountant',
-  3 => 'Masters',
-  4 => 'Consulting Engineer',
-  5 => '<span id="22">
-              <a href="http://localhost/tbahr/employees/22" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'ICT Engineer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="2">
-              <a href="http://localhost/tbahr/employees/2" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Mwanza',
-  2 => 'Architect',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="3">
-              <a href="http://localhost/tbahr/employees/3" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Shinyanga',
-  2 => 'ICT Engineer',
-  3 => 'BAchelor',
-  4 => 'N/A',
-  5 => '<span id="5">
-              <a href="http://localhost/tbahr/employees/5" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Tabora',
-  2 => 'Mechanical Engineer',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="8">
-              <a href="http://localhost/tbahr/employees/8" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Songwe',
-  2 => 'Human Resources',
-  3 => 'Bachelor',
-  4 => 'Profession Engineer',
-  5 => '<span id="15">
-              <a href="http://localhost/tbahr/employees/15" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Simiyu',
-  2 => 'Estate Officer',
-  3 => 'PHD',
-  4 => 'Consulting Engineer',
-  5 => '<span id="16">
-              <a href="http://localhost/tbahr/employees/16" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Otoman Nkomanya',
-  1 => 'Iringa',
-  2 => 'Estate Officer',
-  3 => 'Bachelor',
-  4 => 'Graduate Engineer',
-  5 => '<span id="18">
-              <a href="http://localhost/tbahr/employees/18" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Rachel Sanga',
-  1 => 'Iringa',
-  2 => 'Architect',
-  3 => 'Masters',
-  4 => 'Graduate Engineer',
-  5 => '<span id="19">
-              <a href="http://localhost/tbahr/employees/19" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:43] local.INFO: array (
-  0 => 'Rachel Kyando',
-  1 => 'Arusha',
-  2 => 'ICT Engineer',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="27">
-              <a href="http://localhost/tbahr/employees/27" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:44] local.INFO: array (
-  0 => 'Rodric uvabga',
-  1 => 'Arusha',
-  2 => 'Valuer',
-  3 => 'degree',
-  4 => 'Graduate Engineer',
-  5 => '<span id="17">
-              <a href="http://localhost/tbahr/employees/17" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:44] local.INFO: array (
-  0 => 'Stephano Gastory',
-  1 => 'HQ',
-  2 => 'Architect',
-  3 => 'degree',
-  4 => 'Profession Engineer',
-  5 => '<span id="25">
-              <a href="http://localhost/tbahr/employees/25" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>',
-)  
-[2017-07-08 06:49:44] local.INFO: array (
+[2017-07-08 20:28:21] local.INFO: array (
   0 => 'Tumaini Mwampute',
   1 => 'HQ',
   2 => 'Architect',

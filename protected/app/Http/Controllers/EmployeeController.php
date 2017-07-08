@@ -389,9 +389,9 @@ class EmployeeController extends Controller
 
         $edit = "";
 
-        if(Auth::user()->can('read') && ! Auth::user()->can('write') && !Auth::user()->can('modify') && !Auth::user()->can('fullcontrol')){
+        if(Auth::user()->can('read') && !Auth::user()->can('write','modify','fullcontrol')){
           $edit  = '';
-        }elseif (Auth::user()->can('read','write') && !Auth::user()->can('modify') && !Auth::user()->can('fullcontrol')) {
+        }elseif (Auth::user()->can('read','write') && !Auth::user()->can('modify','fullcontrol')) {
           $edit  = '';
         }elseif (Auth::user()->can('read','write','modify')  && !Auth::user()->can('fullcontrol')) {
 

@@ -28,9 +28,9 @@
         <!-- Datatable plugin -->
     <!-- Global stylesheets -->
    <link href="{{asset("protected/assets/vendor/datatables-plugins/dataTables.bootstrap.css")}}" rel="stylesheet" type="text/css">
+   <link href="{{asset("protected/assets/vendor/datatables-plugins/dataTables.buttons.min.css")}}" rel="stylesheet" type="text/css">
    <link href="{{asset("protected/assets/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet" type="text/css">
    <link href="{{asset("protected/assets/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css">
-   <link href="{{asset("protected/assets/css/tbahr.min.css")}}" rel="stylesheet" type="text/css">
    <link href="{{asset("protected/assets/vendor/sd-admin/dist/css/sb-admin-2.css")}}" rel="stylesheet" type="text/css">
    <!-- Custom Theme Style -->
    <link href="{{asset("assets/build/css/custom.min.css")}}" rel="stylesheet">
@@ -68,6 +68,18 @@
      <script type="text/javascript" src="{{asset("protected/assets/vendor/datatables/js/jquery.dataTables.min.js")}}"></script>
      <script type="text/javascript" src="{{asset("protected/assets/vendor/datatables-plugins/dataTables.bootstrap.min.js")}}"></script>
      <script type="text/javascript" src="{{asset("protected/assets/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
+
+
+     <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.flash.min.js"></script>
+     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
+     <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
+     <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
+
+
     <!-- FastClick -->
     <script src="{{asset("assets/vendors/fastclick/lib/fastclick.js")}}"></script>
     <!-- NProgress -->
@@ -82,32 +94,21 @@
     <script src="{{asset("assets/vendors/iCheck/icheck.min.js")}}"></script>
     <!-- Skycons -->
     <script src="{{asset("assets/vendors/skycons/skycons.js")}}"></script>
-    <!-- Flot -->
-    <script src="{{asset("assets/vendors/Flot/jquery.flot.js")}}"></script>
-    <script src="{{asset("assets/vendors/Flot/jquery.flot.pie.js")}}"></script>
-    <script src="{{asset("assets/vendors/Flot/jquery.flot.time.js")}}"></script>
-    <script src="{{asset("assets/vendors/Flot/jquery.flot.stack.js")}}"></script>
-    <script src="{{asset("assets/vendors/Flot/jquery.flot.resize.js")}}"></script>
-    <!-- Flot plugins -->
-    <script src="{{asset("assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js")}}"></script>
-    <script src="{{asset("assets/vendors/flot-spline/js/jquery.flot.spline.min.js")}}"></script>
-    <script src="{{asset("assets/vendors/flot.curvedlines/curvedLines.js")}}"></script>
+
     <!-- DateJS -->
     <script src="{{asset("assets/vendors/DateJS/build/date.js")}}"></script>
-    <!-- JQVMap -->
-    <script src="{{asset("assets/vendors/jqvmap/dist/jquery.vmap.js")}}"></script>
-    <script src="{{asset("assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js")}}"></script>
-    <script src="{{asset("assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js")}}"></script>
+
+
+
     <!-- bootstrap-daterangepicker -->
     <script src="{{asset("assets/vendors/moment/min/moment.min.js")}}"></script>
     <script src="{{asset("assets/vendors/bootstrap-daterangepicker/daterangepicker.js")}}"></script>
     <script src="{{asset("protected/assets/vendor/datatables/js/datatables.material.min.js")}}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <!-- /core JS files -->
-
     <!-- Custom Theme Scripts -->
     <script src="{{asset("assets/build/js/custom.min.js")}}"></script>
+    <!-- /core JS files -->
     <script type="text/javascript"  src="{{asset("protected/assets/js/tbahr.min.js")}}"></script>
 
 
