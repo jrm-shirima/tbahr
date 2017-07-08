@@ -24,13 +24,21 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2> {{$employee->first_name}} {{$employee->last_name}}'s {{"Details"}}</h2>
-                             <div class="clearfix">
-                               <div class="pull-right">
-                                 <a href="{{url('employees/')}}/{{$employee->id}}/edit" class="btn btn-icon-only push-right"><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
-                                 <a href="#" class="btn btn-icon-only push-right" data-target="#deleteEmployee" data-toggle="modal"><i title="Delete" class="fa fa-trash text-danger" aria-hidden="true"></i></i></a>
 
-                               </div>
-                             </div>
+                           <?php if(Auth::user()->can('modify') && !Auth::user()->can('fullcontrol'))  : ?>
+                            <div class="clearfix">
+                              <div class="pull-right">
+                                <a href="{{url('employees/')}}/{{$employee->id}}/edit" class="btn btn-icon-only push-right"><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                              </div>
+                            </div>
+                          <?php elseif(Auth::user()->can('fullcontrol')): ?>
+                            <div class="clearfix">
+                              <div class="pull-right">
+                                <a href="{{url('employees/')}}/{{$employee->id}}/edit" class="btn btn-icon-only push-right"><i class="fa fa-pencil text-success" aria-hidden="true"></i></a>
+                                <a href="#" class="btn btn-icon-only push-right" data-target="#deleteEmployee" data-toggle="modal"><i title="Delete" class="fa fa-trash text-danger" aria-hidden="true"></i></i></a>
+                              </div>
+                            </div>
+                          <?php endif; ?>
                           </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">

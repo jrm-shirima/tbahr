@@ -142,17 +142,16 @@ class RoleAndPermissionController extends Controller
                             $ids[] = $permission->id;
                         }
                     }
-                  //  $role->attachPermissions($permission);
-                  //  Log::info($role->attachPermissions($ids));
-                  //  Log::info($ids);
-
+                    $role->attachPermissions($ids);
                     }
-              return Response::json(array(
+     return Response::json(array(
                   'success' => true,
                   'errors' => [
                     'message'=>'No Errors'
                     ]
               ), 200);
+
+
             } else {
 
                 return Response::json(array(

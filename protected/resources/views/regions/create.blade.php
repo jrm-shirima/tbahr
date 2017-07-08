@@ -12,6 +12,8 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
+
+    @if( Auth::user()->can('write') || Auth::user()->can('modify')|| Auth::user()->can('fullcontrol'))
       <div class="panel panel-default">
             <div class="panel-heading">
               <div class="row">
@@ -46,7 +48,16 @@
          </form>
       </div>
     </div>
-
+    @else
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+           <div class="alert alert-info alert-dismissable">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Sorry!</strong> You are trying to perform an action that you do not have permission of. <br> Please contact administrator for further instructions
+            </div>
+        </div>
+    </div>
+    @endif
 
 
 @endsection

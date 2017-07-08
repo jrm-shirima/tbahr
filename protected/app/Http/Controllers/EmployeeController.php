@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Employee;
 use App\Region;
 use DB;
+use Auth;
 use App\EmployeeParticular;
 use App\Profession;
 use App\ProfessionRegistration;
@@ -386,6 +387,26 @@ class EmployeeController extends Controller
       $profession  = Profession::find($employeeParticular->profession_id);
       $professionRegistration = professionRegistration::find($employeeParticular->prof_reg_status_id);
 
+        $edit = "";
+
+        if(Auth::user()->can('read') && ! Auth::user()->can('write') && !Auth::user()->can('modify') && !Auth::user()->can('fullcontrol')){
+          $edit  = '';
+        }elseif (Auth::user()->can('read','write') && !Auth::user()->can('modify') && !Auth::user()->can('fullcontrol')) {
+          $edit  = '';
+        }elseif (Auth::user()->can('read','write','modify')  && !Auth::user()->can('fullcontrol')) {
+
+          $edit  = '<span id="'.$employee->id.'">
+                    <a href="'.url("employees").'/'.$employee->id.'/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
+                   </span>';
+        }elseif(Auth::user()->can('read','write','modify','fullcontrol')){
+
+          $edit  = '<span id="'.$employee->id.'">
+                    <a href="'.url("employees").'/'.$employee->id.'/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
+                   </span>';
+        }
+
+
+
       return array(
           $employee->first_name.' '.$employee->last_name,
           $region->region,
@@ -394,10 +415,8 @@ class EmployeeController extends Controller
           $professionRegistration->profession_reg_name,
           '<span id="'.$employee->id.'">
               <a href="'.url("employees").'/'.$employee->id.'" title="View" class="btn btn-icon-only"> <i class="fa fa-eye text-primary"  title="View" aria-hidden="true"></i></a>
-             </span>
-             <span id="'.$employee->id.'">
-                 <a href="'.url("employees").'/'.$employee->id.'/edit" title="Edit" class="btn btn-icon-only"><i title="Edit" class="fa fa-pencil" aria-hidden="true"></i></a>
-                </span>',
+             </span>'
+             .$edit,
 
       );
     }

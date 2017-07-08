@@ -69,3 +69,9 @@ section.inner-wraper{
     background-color: #449d44;
     border-color: #398439;
 }
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}

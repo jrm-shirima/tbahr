@@ -12,6 +12,8 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
+
+          @if( Auth::user()->can('write') || Auth::user()->can('modify')|| Auth::user()->can('fullcontrol'))
           <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header">Add Profession Registration Name</h2>
@@ -38,6 +40,16 @@
                 </div>
             </div>
              </form>
+             @else
+             <div class="row">
+                 <div class="col-md-8 col-md-offset-2">
+                    <div class="alert alert-info alert-dismissable">
+                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                       <strong>Sorry!</strong> You are trying to perform an action that you do not have permission of. <br> Please contact administrator for further instructions
+                     </div>
+                 </div>
+             </div>
+             @endif
 @endsection
 @section('footer')
      @include('layout.footer')

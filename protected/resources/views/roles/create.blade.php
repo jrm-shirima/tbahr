@@ -12,6 +12,9 @@
      @include('layout.top-navigation')
 @endsection
 @section('page-content')
+
+    @if( Auth::user()->can('fullcontrol'))
+
       <div class="panel panel-default">
       <div class="panel-heading">
         <div class="row">
@@ -35,10 +38,10 @@
                         <label for="rele">Add role capability</label>
                     </div>
                     <div class="checkbox">
-                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="read">Read</label>
-                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="write">Write</label>
-                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="modify">Modify</label>
-                      <label class="checkbox-inline"><input name="permission[]" type="checkbox" value="fullcontrol">Full Control</label>
+                      <label class="checkbox-inline"><input id="readPermission" name="permission[]" type="checkbox" value="read">Read</label>
+                      <label class="checkbox-inline"><input id="writePermission"  name="permission[]" type="checkbox" value="write">Write</label>
+                      <label class="checkbox-inline"><input id="modifyPermission" name="permission[]" type="checkbox" value="modify">Modify</label>
+                      <label class="checkbox-inline"><input id="fullPermission" name="permission[]" type="checkbox" value="fullcontrol">Full Control</label>
                    </div>
             </div>
         </div>
@@ -56,6 +59,17 @@
       </div>
       </div>
 
+      @else
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+             <div class="alert alert-info alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Sorry!</strong> You are trying to perform an action that you do not have permission of. <br> Please contact administrator for further instructions
+              </div>
+          </div>
+      </div>
+      @endif
+
 
 
 @endsection
@@ -66,9 +80,42 @@
  <script>
      $(document).ready(function(){
 
+      var readPermission    = $("#readPermission");
+      var writePermission   = $("#writePermission");
+      var modifyPermission  = $("#modifyPermission");
+      var fullPermission    = $("#fullPermission");
+
+       readPermission.on('click', function(){
+
+         writePermission.prop('checked', false);
+         modifyPermission.prop('checked', false);
+         fullPermission.prop('checked', false);
+         //readPermission.prop('checked', false);
+         });
+         writePermission.on('click', function(){
+            readPermission.prop('checked', true);
+            modifyPermission.prop('checked', false);
+            fullPermission.prop('checked', false);
+         //readPermission.prop('checked', false);
+         });
+         modifyPermission.on('click', function(){
+           readPermission.prop('checked', true);
+           writePermission.prop('checked', true);
+           fullPermission.prop('checked', false);
+
+         //readPermission.prop('checked', false);
+         });
+
+         fullPermission.on('click', function(){
+            readPermission.prop('checked', true);
+            writePermission.prop('checked', true);
+            modifyPermission.prop('checked', true);
+            //readPermission.prop('checked', false);
+         });
+
+
       var formObject = $("#formAddRole");
       formObject.on('submit',function(){
-
               var postData = formObject.serializeArray();
               var formURL  = formObject.attr("action");
 
@@ -76,10 +123,7 @@
 
           return false;
           });
-
-
-
-    function submitData(postData, formURL){
+   function submitData(postData, formURL){
 
 
         $.ajax(

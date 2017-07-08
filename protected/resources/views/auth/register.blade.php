@@ -19,7 +19,7 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-
+          @if( Auth::user()->can('fullcontrol'))
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
@@ -117,6 +117,16 @@
                     </div>
               </div>
         </div>
+        @else
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+               <div class="alert alert-info alert-dismissable">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>Sorry!</strong> You are trying to perform an action that you do not have permission of. <br> Please contact administrator for further instructions
+                </div>
+            </div>
+        </div>
+        @endif
 @endsection
 @section('header')
      @include('layout.footer')
