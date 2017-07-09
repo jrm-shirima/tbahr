@@ -14,11 +14,15 @@
 @section('page-content')
 
     @if( Auth::user()->can('write','modify','fullcontrol'))
+        <div class="panel panel-default">
+          <div class="panel-heading">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header">Add Profession</h2>
                 </div>
             </div>
+          </div>
+          <div class="panel-body">
            <form id="formProfession" action="{{url('professions')}}" method="POST">
              {{ csrf_field() }}
              <div class="row">
@@ -40,7 +44,8 @@
                 </div>
             </div>
              </form>
-
+           </div>
+           </div>
              @else
              <div class="row">
                  <div class="col-md-8 col-md-offset-2">

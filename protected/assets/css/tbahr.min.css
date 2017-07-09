@@ -40,7 +40,7 @@ body {
 .nav_menu {
     float: left;
     background: #EDEDED;
-    border-bottom: 1px solid #D9DEE4;
+    border-bottom: 1px solid #2A3F54;
     margin-bottom: 10px;
     width: 100%;
     position: relative;
@@ -76,10 +76,21 @@ section.inner-wraper{
     border-color: #bce8f1;
 }
 .profile.left-profile{
-  margin-top: 55px;
+  margin-top: 5px;
   position: relative;
 }
 .tile_count {
     margin-bottom: 20px;
-    margin-top: 70px;
+    margin-top: 5px;
+}
+.nav-md .container.body .right_col {
+    padding: 10px 20px 0;
+    margin-left: 230px;
+    margin-top: 56px;
+}
+.nav-sm .container.body .right_col {
+    padding: 10px 20px;
+    margin-left: 70px;
+      margin-top: 56px;
+    z-index: 2;
 }
